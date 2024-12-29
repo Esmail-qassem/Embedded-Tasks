@@ -1,0 +1,20 @@
+#include "../BSW/LIB/STD_TYPES.h"
+#include "../BSW/LIB/BIT_MATH.h"
+#include "../BSW/MCAL/DIO/inc/DIO_interface.h"
+
+
+
+int main()
+{
+
+
+	while(1)
+	{
+
+
+	}
+
+
+}
+
+

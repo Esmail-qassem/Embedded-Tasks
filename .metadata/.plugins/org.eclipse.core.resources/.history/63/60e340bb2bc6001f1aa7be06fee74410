@@ -1,0 +1,12 @@
+
+#include "../../../BSW/MCAL/DIO/inc/DIO_interface.h"
+#include "../../../BSW/MCAL/GIE/inc/GIE_interface.h"
+#include "../../../BSW/MCAL/PORT/inc/PORT_interface.h"
+#include "../../../BSW/HAL/CLCD/inc/CLCD_interface.h"
+#include "../../../BSW/MCAL/TIMER1/inc/TIMER1_interface.h"
+
+
+
+void TrafficLightInit(void);
+void TrafficLightMainFunction(void);
+

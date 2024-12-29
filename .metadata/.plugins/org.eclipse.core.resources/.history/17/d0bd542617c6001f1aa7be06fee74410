@@ -1,0 +1,43 @@
+#include "../BSW/LIB/STD_TYPES.h"
+#include "../BSW/LIB/BIT_MATH.h"
+#include "../BSW/MCAL/PORT/inc/PORT_interface.h"
+#include "../BSW/MCAL/DIO/inc/DIO_interface.h"
+#include "../BSW/HAL/CLCD/inc/CLCD_interface.h"
+#include "../BSW/MCAL/TIMER1/inc/TIMER1_interface.h"
+
+void A7A void
+{
+	DIO_SetPinVal(DIO_PORTC,DIO_Pin0,DIO_HIGH);
+		DIO_SetPinVal(DIO_PORTC,DIO_Pin1,DIO_HIGH);
+
+}
+int main()
+{
+	PORT_voidInit();
+	CLCD_voidInit();
+	TIMER1_voidInit();
+
+
+	DIO_SetPinVal(DIO_PORTC,DIO_Pin2,DIO_HIGH);
+	TIMER1_voidSetTimerValue(31250);
+	TIMER1_CAPTURESetCallBck(&A7A);
+
+
+	while(1)
+	{
+		CLCD_voidGoToXY(0,0);
+		CLCD_voidSendString("ESMAIL ");
+
+		for(int i=0;i<100;i++)
+		{
+		CLCD_voidGoToXY(1,0);
+		CLCD_voidWriteNumber(i);
+		}
+
+
+	}
+
+
+}
+
+

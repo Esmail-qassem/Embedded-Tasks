@@ -1,0 +1,3 @@
+App/TrafficLights/src/TrafficLightsControl.o \
+  App/TrafficLights/src/TrafficLightsControl.o:  \
+ ../App/TrafficLights/src/TrafficLightsControl.c

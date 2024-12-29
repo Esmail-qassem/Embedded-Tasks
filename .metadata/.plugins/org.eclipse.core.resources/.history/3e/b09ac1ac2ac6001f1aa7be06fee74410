@@ -1,0 +1,22 @@
+#include "../inc/TrafficLightsControl_interface.h"
+#include "../inc/TrafficLightsControl_config.h"
+#include "../inc/TrafficLightsControl_private.h"
+
+
+
+void TrafficLightInit(void)
+{
+	PORT_voidInit();
+    CLCD_voidInit();
+    GIE_Enable();
+    TIMER1_voidInit();
+
+
+}
+void TrafficLightMainFunction(void)
+{
+
+
+
+
+}

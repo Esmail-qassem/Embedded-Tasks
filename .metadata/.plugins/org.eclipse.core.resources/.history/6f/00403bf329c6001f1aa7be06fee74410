@@ -1,0 +1,4 @@
+#include "../inc/TrafficLightsControl_interface.h"
+#include "../inc/TrafficLightsControl_config.h"
+#include "../inc/TrafficLightsControl_private.h"
+

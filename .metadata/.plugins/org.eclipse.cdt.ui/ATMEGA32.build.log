@@ -1,0 +1,184 @@
+18:40:56 **** Incremental Build of configuration Debug for project ATMEGA32 ****
+make all 
+Building file: ../BSW/MCAL/TIMER2/src/TIMER2_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"BSW/MCAL/TIMER2/src/TIMER2_program.d" -MT"BSW/MCAL/TIMER2/src/TIMER2_program.o" -c -o "BSW/MCAL/TIMER2/src/TIMER2_program.o" "../BSW/MCAL/TIMER2/src/TIMER2_program.c"
+Finished building: ../BSW/MCAL/TIMER2/src/TIMER2_program.c
+ 
+Building file: ../BSW/MCAL/TIMER1/src/TIMER1_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"BSW/MCAL/TIMER1/src/TIMER1_program.d" -MT"BSW/MCAL/TIMER1/src/TIMER1_program.o" -c -o "BSW/MCAL/TIMER1/src/TIMER1_program.o" "../BSW/MCAL/TIMER1/src/TIMER1_program.c"
+../BSW/MCAL/TIMER1/src/TIMER1_program.c:10:35: warning: extra tokens at end of #include directive
+Finished building: ../BSW/MCAL/TIMER1/src/TIMER1_program.c
+ 
+Building file: ../BSW/MCAL/TIMER0/src/TIMER0_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"BSW/MCAL/TIMER0/src/TIMER0_program.d" -MT"BSW/MCAL/TIMER0/src/TIMER0_program.o" -c -o "BSW/MCAL/TIMER0/src/TIMER0_program.o" "../BSW/MCAL/TIMER0/src/TIMER0_program.c"
+Finished building: ../BSW/MCAL/TIMER0/src/TIMER0_program.c
+ 
+Building file: ../BSW/MCAL/PORT/src/PORT_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"BSW/MCAL/PORT/src/PORT_program.d" -MT"BSW/MCAL/PORT/src/PORT_program.o" -c -o "BSW/MCAL/PORT/src/PORT_program.o" "../BSW/MCAL/PORT/src/PORT_program.c"
+Finished building: ../BSW/MCAL/PORT/src/PORT_program.c
+ 
+Building file: ../BSW/MCAL/GIE/src/GIE_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"BSW/MCAL/GIE/src/GIE_program.d" -MT"BSW/MCAL/GIE/src/GIE_program.o" -c -o "BSW/MCAL/GIE/src/GIE_program.o" "../BSW/MCAL/GIE/src/GIE_program.c"
+Finished building: ../BSW/MCAL/GIE/src/GIE_program.c
+ 
+Building file: ../BSW/MCAL/EXT/src/EXTI_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"BSW/MCAL/EXT/src/EXTI_program.d" -MT"BSW/MCAL/EXT/src/EXTI_program.o" -c -o "BSW/MCAL/EXT/src/EXTI_program.o" "../BSW/MCAL/EXT/src/EXTI_program.c"
+../BSW/MCAL/EXT/src/EXTI_program.c:69:2: warning: #warning "INT1 Wrong init"
+../BSW/MCAL/EXT/src/EXTI_program.c:89:2: warning: #warning "INT2 Wrong init"
+Finished building: ../BSW/MCAL/EXT/src/EXTI_program.c
+ 
+Building file: ../BSW/MCAL/DIO/src/DIO_Program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"BSW/MCAL/DIO/src/DIO_Program.d" -MT"BSW/MCAL/DIO/src/DIO_Program.o" -c -o "BSW/MCAL/DIO/src/DIO_Program.o" "../BSW/MCAL/DIO/src/DIO_Program.c"
+Finished building: ../BSW/MCAL/DIO/src/DIO_Program.c
+ 
+Building file: ../BSW/MCAL/ADC/src/ADC_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"BSW/MCAL/ADC/src/ADC_program.d" -MT"BSW/MCAL/ADC/src/ADC_program.o" -c -o "BSW/MCAL/ADC/src/ADC_program.o" "../BSW/MCAL/ADC/src/ADC_program.c"
+Finished building: ../BSW/MCAL/ADC/src/ADC_program.c
+ 
+Building file: ../BSW/HAL/CLCD/src/CLCD_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"BSW/HAL/CLCD/src/CLCD_program.d" -MT"BSW/HAL/CLCD/src/CLCD_program.o" -c -o "BSW/HAL/CLCD/src/CLCD_program.o" "../BSW/HAL/CLCD/src/CLCD_program.c"
+In file included from ../BSW/HAL/CLCD/src/CLCD_program.c:13:
+d:/eclipse/eclipse/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../BSW/HAL/CLCD/src/CLCD_program.c
+ 
+Building file: ../App/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/main.d" -MT"App/main.o" -c -o "App/main.o" "../App/main.c"
+Finished building: ../App/main.c
+ 
+Building target: libATMEGA32.a
+Invoking: AVR Archiver
+avr-ar -r  "libATMEGA32.a"  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/main.o  
+d:\Eclipse\eclipse\WinAVR\bin\avr-ar.exe: creating libATMEGA32.a
+Finished building target: libATMEGA32.a
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S libATMEGA32.a  >"libATMEGA32.lss"
+Finished building: libATMEGA32.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 libATMEGA32.a
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:       0 bytes (0.0% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:       0 bytes (0.0% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:       0 bytes (0.0% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:       0 bytes (0.0% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:       0 bytes (0.0% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:       0 bytes (0.0% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:       0 bytes (0.0% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:       0 bytes (0.0% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:       0 bytes (0.0% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:       0 bytes (0.0% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+18:40:59 Build Finished. 0 errors, 4 warnings. (took 2s.121ms)
+
