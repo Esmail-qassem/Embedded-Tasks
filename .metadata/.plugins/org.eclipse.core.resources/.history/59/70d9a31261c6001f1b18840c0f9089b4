@@ -4,9 +4,9 @@
 
 #define Traffic_PORT            DIO_PORTC
 
-#define Traffic_LED_GREEN     DIO_Pin2
-#define Traffic_LED_YELLOW    DIO_Pin1
-#define Traffic_LED_RED       DIO_Pin0
+#define Traffic_LED_GREEN     DIO_Pin3
+#define Traffic_LED_YELLOW
+#define Traffic_LED_RED
 
 
 

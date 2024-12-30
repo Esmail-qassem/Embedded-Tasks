@@ -5174,12 +5174,12 @@ static void HandleGreenState(void)
     1e62:	cf 93       	push	r28
     1e64:	cd b7       	in	r28, 0x3d	; 61
     1e66:	de b7       	in	r29, 0x3e	; 62
-	 DIO_SetPinVal(DIO_PORTC, DIO_Pin0, DIO_LOW);
+	 DIO_SetPinVal(Traffic_PORT, Traffic_LED_RED, DIO_LOW);
     1e68:	82 e0       	ldi	r24, 0x02	; 2
     1e6a:	60 e0       	ldi	r22, 0x00	; 0
     1e6c:	40 e0       	ldi	r20, 0x00	; 0
     1e6e:	0e 94 17 09 	call	0x122e	; 0x122e <DIO_SetPinVal>
-    DIO_SetPinVal(DIO_PORTC, DIO_Pin2, DIO_HIGH);
+    DIO_SetPinVal(Traffic_PORT, Traffic_LED_GREEN, DIO_HIGH);
     1e72:	82 e0       	ldi	r24, 0x02	; 2
     1e74:	62 e0       	ldi	r22, 0x02	; 2
     1e76:	41 e0       	ldi	r20, 0x01	; 1
@@ -5196,17 +5196,17 @@ static void HandleRedState(void)
     1e84:	cf 93       	push	r28
     1e86:	cd b7       	in	r28, 0x3d	; 61
     1e88:	de b7       	in	r29, 0x3e	; 62
-	DIO_SetPinVal(DIO_PORTC, DIO_Pin2, DIO_LOW);
+	DIO_SetPinVal(Traffic_PORT, Traffic_LED_GREEN, DIO_LOW);
     1e8a:	82 e0       	ldi	r24, 0x02	; 2
     1e8c:	62 e0       	ldi	r22, 0x02	; 2
     1e8e:	40 e0       	ldi	r20, 0x00	; 0
     1e90:	0e 94 17 09 	call	0x122e	; 0x122e <DIO_SetPinVal>
-	DIO_SetPinVal(DIO_PORTC, DIO_Pin1, DIO_LOW);
+	DIO_SetPinVal(Traffic_PORT, Traffic_LED_YELLOW, DIO_LOW);
     1e94:	82 e0       	ldi	r24, 0x02	; 2
     1e96:	61 e0       	ldi	r22, 0x01	; 1
     1e98:	40 e0       	ldi	r20, 0x00	; 0
     1e9a:	0e 94 17 09 	call	0x122e	; 0x122e <DIO_SetPinVal>
-	DIO_SetPinVal(DIO_PORTC, DIO_Pin0, DIO_HIGH);
+	DIO_SetPinVal(Traffic_PORT, Traffic_LED_RED, DIO_HIGH);
     1e9e:	82 e0       	ldi	r24, 0x02	; 2
     1ea0:	60 e0       	ldi	r22, 0x00	; 0
     1ea2:	41 e0       	ldi	r20, 0x01	; 1
@@ -5223,17 +5223,17 @@ static void HandleyellowState(void)
     1eb0:	cf 93       	push	r28
     1eb2:	cd b7       	in	r28, 0x3d	; 61
     1eb4:	de b7       	in	r29, 0x3e	; 62
-	DIO_SetPinVal(DIO_PORTC, DIO_Pin2, DIO_LOW);
+	DIO_SetPinVal(Traffic_PORT, Traffic_LED_GREEN, DIO_LOW);
     1eb6:	82 e0       	ldi	r24, 0x02	; 2
     1eb8:	62 e0       	ldi	r22, 0x02	; 2
     1eba:	40 e0       	ldi	r20, 0x00	; 0
     1ebc:	0e 94 17 09 	call	0x122e	; 0x122e <DIO_SetPinVal>
-	DIO_SetPinVal(DIO_PORTC, DIO_Pin0, DIO_LOW);
+	DIO_SetPinVal(Traffic_PORT, Traffic_LED_RED, DIO_LOW);
     1ec0:	82 e0       	ldi	r24, 0x02	; 2
     1ec2:	60 e0       	ldi	r22, 0x00	; 0
     1ec4:	40 e0       	ldi	r20, 0x00	; 0
     1ec6:	0e 94 17 09 	call	0x122e	; 0x122e <DIO_SetPinVal>
-    DIO_SetPinVal(DIO_PORTC, DIO_Pin1, DIO_HIGH);
+    DIO_SetPinVal(Traffic_PORT, Traffic_LED_YELLOW, DIO_HIGH);
     1eca:	82 e0       	ldi	r24, 0x02	; 2
     1ecc:	61 e0       	ldi	r22, 0x01	; 1
     1ece:	41 e0       	ldi	r20, 0x01	; 1

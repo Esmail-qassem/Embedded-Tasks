@@ -1,27 +1,5 @@
-05:46:49 **** Incremental Build of configuration Debug for project AT32 ****
+05:51:08 **** Incremental Build of configuration Debug for project AT32 ****
 make all 
-Building file: ../App/TrafficLights/src/TrafficLightsControl.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/TrafficLights/src/TrafficLightsControl.d" -MT"App/TrafficLights/src/TrafficLightsControl.o" -c -o "App/TrafficLights/src/TrafficLightsControl.o" "../App/TrafficLights/src/TrafficLightsControl.c"
-../App/TrafficLights/src/TrafficLightsControl.c: In function 'TrafficLightMainFunction':
-../App/TrafficLights/src/TrafficLightsControl.c:76: warning: pointer targets in passing argument 1 of 'CLCD_voidSendString' differ in signedness
-../App/TrafficLights/src/TrafficLightsControl.c:78: warning: pointer targets in passing argument 1 of 'CLCD_voidSendString' differ in signedness
-../App/TrafficLights/src/TrafficLightsControl.c:82: warning: pointer targets in passing argument 1 of 'CLCD_voidSendString' differ in signedness
-Finished building: ../App/TrafficLights/src/TrafficLightsControl.c
- 
-Building target: AT32.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/main.o   
-Finished building target: AT32.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S AT32.elf  >"AT32.lss"
-Finished building: AT32.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
-Finished building: AT32.hex
- 
 Invoking: Print Size
 avr-size --format=avr --mcu=atmega32 AT32.elf
 AVR Memory Usage

@@ -22,19 +22,19 @@ typedef enum
 
 static void HandleGreenState(void)
 {
-	 DIO_SetPinVal(Traffic_PORT, Traffic_LED_RED, DIO_LOW);
-    DIO_SetPinVal(Traffic_PORT, Traffic_LED_GREEN, DIO_HIGH);
+	 DIO_SetPinVal(DIO_PORTC, DIO_Pin0, DIO_LOW);
+    DIO_SetPinVal(DIO_PORTC, DIO_Pin2, DIO_HIGH);
 }
 static void HandleRedState(void)
 {
-	DIO_SetPinVal(Traffic_PORT, Traffic_LED_GREEN, DIO_LOW);
-	DIO_SetPinVal(Traffic_PORT, Traffic_LED_YELLOW, DIO_LOW);
-	DIO_SetPinVal(Traffic_PORT, Traffic_LED_RED, DIO_HIGH);
+	DIO_SetPinVal(DIO_PORTC, DIO_Pin2, DIO_LOW);
+	DIO_SetPinVal(DIO_PORTC, DIO_Pin1, DIO_LOW);
+	DIO_SetPinVal(DIO_PORTC, DIO_Pin0, DIO_HIGH);
 }
 static void HandleyellowState(void)
 {
-	DIO_SetPinVal(Traffic_PORT, Traffic_LED_GREEN, DIO_LOW);
-	DIO_SetPinVal(Traffic_PORT, Traffic_LED_RED, DIO_LOW);
-    DIO_SetPinVal(Traffic_PORT, Traffic_LED_YELLOW, DIO_HIGH);
+	DIO_SetPinVal(DIO_PORTC, DIO_Pin2, DIO_LOW);
+	DIO_SetPinVal(DIO_PORTC, DIO_Pin0, DIO_LOW);
+    DIO_SetPinVal(DIO_PORTC, DIO_Pin1, DIO_HIGH);
 }
 #endif /* APP_TRAFFICLIGHTS_INC_TRAFFICLIGHTSCONTROL_PRIVATE_H_ */

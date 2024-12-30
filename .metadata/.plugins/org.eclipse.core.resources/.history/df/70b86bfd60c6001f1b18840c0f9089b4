@@ -2,11 +2,11 @@
 #ifndef APP_TRAFFICLIGHTS_INC_TRAFFICLIGHTSCONTROL_CONFIG_H_
 #define APP_TRAFFICLIGHTS_INC_TRAFFICLIGHTSCONTROL_CONFIG_H_
 
-#define Traffic_PORT            DIO_PORTC
+#define Traffic_PORT
 
-#define Traffic_LED_GREEN     DIO_Pin2
-#define Traffic_LED_YELLOW    DIO_Pin1
-#define Traffic_LED_RED       DIO_Pin0
+#define Traffic_LED_GREEN
+#define Traffic_LED_YELLOW
+#define Traffic_LED_RED
 
 
 
