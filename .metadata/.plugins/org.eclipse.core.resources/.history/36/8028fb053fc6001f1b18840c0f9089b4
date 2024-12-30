@@ -1,0 +1,87 @@
+#include "../inc/TrafficLightsControl_interface.h"
+#include "../inc/TrafficLightsControl_config.h"
+#include "../inc/TrafficLightsControl_private.h"
+#include "../../../Services/Stack/Stack.h"
+
+Stack TrafficStack;
+int static global=0;
+int variable;
+void test(void) {
+	global++;
+	CLCD_voidSendString("a7a");
+
+	  if (global ==1 )
+	    {// Green light ON
+
+	    }
+	    else if (global == 6)
+	    { // Yellow light ON
+	    	Stack_Pop(&TrafficStack,&variable);
+	    }
+	    else if (global== 11)
+	    {  // Red light ON
+	    	Stack_Pop(&TrafficStack,&variable);
+
+	    }
+	    else if (global== 16)
+	    {
+	        Stack_Push(&TrafficStack,Yellow);
+	        Stack_Push(&TrafficStack,Red);
+	    	CLCD_voidSendCommand(1);//clear the display
+	    	global=0b00;
+
+	    }
+
+
+}
+
+void TrafficLightInit(void)
+{
+	PORT_voidInit();
+    CLCD_voidInit();
+    GIE_Enable();
+    TIMER1_voidInit();
+	TIMER1_voidSetChannelACompMatch(31250);
+	TIMER1_CTCASetCallBck(&test);
+    Stack_Creation(&TrafficStack);
+    Stack_Push(&TrafficStack,Red);
+    Stack_Push(&TrafficStack,Yellow);
+    Stack_Push(&TrafficStack,Green);
+
+
+}
+void TrafficLightMainFunction(void)
+{
+	CLCD_voidGoToXY(0,0);
+	CLCD_voidSendString("Traffic light");
+	CLCD_voidGoToXY(1,0);
+	CLCD_voidWriteNumber(global);
+	CLCD_voidWriteNumber(TrafficStack.top->entry);
+
+//	switch (TrafficStack.top->entry)
+//	{
+//	case Green :
+//	{
+//		 DIO_SetPinVal(DIO_PORTC, DIO_Pin0, DIO_LOW);  // Yellow OFF
+//	     DIO_SetPinVal(DIO_PORTC, DIO_Pin2, DIO_HIGH); // Red ON
+//		break;
+//	}
+//	case Yellow :
+//	{
+//        DIO_SetPinVal(DIO_PORTC, DIO_Pin2, DIO_LOW);  // Green OFF
+//        DIO_SetPinVal(DIO_PORTC, DIO_Pin1, DIO_HIGH); // Yellow ON
+//		break;
+//	}
+//	case Red :
+//	{
+//        DIO_SetPinVal(DIO_PORTC, DIO_Pin1, DIO_LOW);  // Red OFF
+//        DIO_SetPinVal(DIO_PORTC, DIO_Pin0, DIO_HIGH); // Green ON
+//		break;
+//	}
+//	default:
+//	{
+//		break;
+//	}
+//
+//	}
+}

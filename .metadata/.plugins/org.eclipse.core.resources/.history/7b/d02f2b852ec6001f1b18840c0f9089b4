@@ -1,0 +1,33 @@
+#include "../inc/TrafficLightsControl_interface.h"
+#include "../inc/TrafficLightsControl_config.h"
+#include "../inc/TrafficLightsControl_private.h"
+
+
+void A7A (void)
+{int static global=0;
+	global++;
+}
+
+void TrafficLightInit(void)
+{
+	PORT_voidInit();
+    CLCD_voidInit();
+    GIE_Enable();
+    TIMER1_voidInit();
+
+
+}
+void TrafficLightMainFunction(void)
+{
+
+	TIMER1_voidSetChannelACompMatch(31250);
+		TIMER1_CTCASetCallBck(&A7A);
+
+		while(1)
+		{
+			CLCD_voidGoToXY(0,0);
+			CLCD_voidWriteNumber(global);
+		}
+
+
+}

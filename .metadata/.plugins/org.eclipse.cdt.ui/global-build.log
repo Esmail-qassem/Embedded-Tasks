@@ -1,14 +1,13 @@
-23:34:06 **** Incremental Build of configuration Debug for project AT32 ****
+05:42:12 **** Incremental Build of configuration Debug for project AT32 ****
 make all 
 Building file: ../App/TrafficLights/src/TrafficLightsControl.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/TrafficLights/src/TrafficLightsControl.d" -MT"App/TrafficLights/src/TrafficLightsControl.o" -c -o "App/TrafficLights/src/TrafficLightsControl.o" "../App/TrafficLights/src/TrafficLightsControl.c"
+../App/TrafficLights/src/TrafficLightsControl.c: In function 'TrafficLightMainFunction':
+../App/TrafficLights/src/TrafficLightsControl.c:94: warning: pointer targets in passing argument 1 of 'CLCD_voidSendString' differ in signedness
+../App/TrafficLights/src/TrafficLightsControl.c:96: warning: pointer targets in passing argument 1 of 'CLCD_voidSendString' differ in signedness
+../App/TrafficLights/src/TrafficLightsControl.c:100: warning: pointer targets in passing argument 1 of 'CLCD_voidSendString' differ in signedness
 Finished building: ../App/TrafficLights/src/TrafficLightsControl.c
- 
-Building file: ../App/main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/main.d" -MT"App/main.o" -c -o "App/main.o" "../App/main.c"
-Finished building: ../App/main.c
  
 Building target: AT32.elf
 Invoking: AVR C Linker
@@ -29,10 +28,10 @@ AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:   10066 bytes (30.7% Full)
+Program:   10612 bytes (32.4% Full)
 (.text + .data + .bootloader)
 
-Data:         76 bytes (3.7% Full)
+Data:        118 bytes (5.8% Full)
 (.data + .bss + .noinit)
 
 
