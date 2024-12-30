@@ -7,11 +7,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
   1 .data         00000048  00800060  0000292c  000029c0  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  2 .bss          0000002e  008000a8  008000a8  00002a08  2**0
+  2 .bss          0000002c  008000a8  008000a8  00002a08  2**0
                   ALLOC
-  3 .stab         00004308  00000000  00000000  00002a08  2**2
+  3 .stab         00004314  00000000  00000000  00002a08  2**2
                   CONTENTS, READONLY, DEBUGGING
-  4 .stabstr      0000380c  00000000  00000000  00006d10  2**0
+  4 .stabstr      000037fc  00000000  00000000  00006d1c  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -74,7 +74,7 @@ Disassembly of section .text:
       7e:	1d 92       	st	X+, r1
 
 00000080 <.do_clear_bss_start>:
-      80:	a6 3d       	cpi	r26, 0xD6	; 214
+      80:	a4 3d       	cpi	r26, 0xD4	; 212
       82:	b1 07       	cpc	r27, r17
       84:	e1 f7       	brne	.-8      	; 0x7e <.do_clear_bss_loop>
       86:	0e 94 6c 10 	call	0x20d8	; 0x20d8 <main>
@@ -5164,9 +5164,9 @@ CLCD_voidSendData(copy_uint8PatternNumber);
     1e5e:	08 95       	ret
 
 00001e60 <HandleGreenState>:
-int static timer_counter=0;
-StackEnery Local_Variable=Green;
-int variable;
+#define GREEN_DURATION  5
+#define YELLOW_DURATION 5
+#define RED_DURATION    5
 
 static void HandleGreenState(void)
 {
@@ -5244,6 +5244,11 @@ static void HandleyellowState(void)
     1ed8:	08 95       	ret
 
 00001eda <test>:
+
+Stack TrafficStack;
+int static timer_counter=0;
+StackEnery Local_Variable=Green;
+
 void test(void) {
     1eda:	df 93       	push	r29
     1edc:	cf 93       	push	r28
@@ -5264,18 +5269,18 @@ void test(void) {
     1f02:	91 05       	cpc	r25, r1
     1f04:	39 f4       	brne	.+14     	; 0x1f14 <test+0x3a>
 		Stack_Pop(&TrafficStack,&Local_Variable);
-    1f06:	86 ec       	ldi	r24, 0xC6	; 198
+    1f06:	84 ec       	ldi	r24, 0xC4	; 196
     1f08:	90 e0       	ldi	r25, 0x00	; 0
-    1f0a:	23 ea       	ldi	r18, 0xA3	; 163
+    1f0a:	24 ea       	ldi	r18, 0xA4	; 164
     1f0c:	30 e0       	ldi	r19, 0x00	; 0
     1f0e:	b9 01       	movw	r22, r18
     1f10:	0e 94 e2 00 	call	0x1c4	; 0x1c4 <Stack_Pop>
 
 	switch(Local_Variable)
-    1f14:	80 91 a3 00 	lds	r24, 0x00A3
-    1f18:	90 91 a4 00 	lds	r25, 0x00A4
-    1f1c:	a0 91 a5 00 	lds	r26, 0x00A5
-    1f20:	b0 91 a6 00 	lds	r27, 0x00A6
+    1f14:	80 91 a4 00 	lds	r24, 0x00A4
+    1f18:	90 91 a5 00 	lds	r25, 0x00A5
+    1f1c:	a0 91 a6 00 	lds	r26, 0x00A6
+    1f20:	b0 91 a7 00 	lds	r27, 0x00A7
     1f24:	89 83       	std	Y+1, r24	; 0x01
     1f26:	9a 83       	std	Y+2, r25	; 0x02
     1f28:	ab 83       	std	Y+3, r26	; 0x03
@@ -5355,7 +5360,7 @@ void test(void) {
     1fa8:	f4 f0       	brlt	.+60     	; 0x1fe6 <test+0x10c>
 			{
 	            Stack_Push(&TrafficStack,Red);
-    1faa:	86 ec       	ldi	r24, 0xC6	; 198
+    1faa:	84 ec       	ldi	r24, 0xC4	; 196
     1fac:	90 e0       	ldi	r25, 0x00	; 0
     1fae:	47 e0       	ldi	r20, 0x07	; 7
     1fb0:	50 e0       	ldi	r21, 0x00	; 0
@@ -5363,7 +5368,7 @@ void test(void) {
     1fb4:	70 e0       	ldi	r23, 0x00	; 0
     1fb6:	0e 94 8e 00 	call	0x11c	; 0x11c <Stack_Push>
 	            Stack_Push(&TrafficStack,Yellow);
-    1fba:	86 ec       	ldi	r24, 0xC6	; 198
+    1fba:	84 ec       	ldi	r24, 0xC4	; 196
     1fbc:	90 e0       	ldi	r25, 0x00	; 0
     1fbe:	46 e0       	ldi	r20, 0x06	; 6
     1fc0:	50 e0       	ldi	r21, 0x00	; 0
@@ -5371,7 +5376,7 @@ void test(void) {
     1fc4:	70 e0       	ldi	r23, 0x00	; 0
     1fc6:	0e 94 8e 00 	call	0x11c	; 0x11c <Stack_Push>
 	            Stack_Push(&TrafficStack,Green);
-    1fca:	86 ec       	ldi	r24, 0xC6	; 198
+    1fca:	84 ec       	ldi	r24, 0xC4	; 196
     1fcc:	90 e0       	ldi	r25, 0x00	; 0
     1fce:	45 e0       	ldi	r20, 0x05	; 5
     1fd0:	50 e0       	ldi	r21, 0x00	; 0
@@ -5423,11 +5428,11 @@ void TrafficLightInit(void)
     2018:	0e 94 94 03 	call	0x728	; 0x728 <TIMER1_CTCASetCallBck>
 	/*stack initialization*/
     Stack_Creation(&TrafficStack);
-    201c:	86 ec       	ldi	r24, 0xC6	; 198
+    201c:	84 ec       	ldi	r24, 0xC4	; 196
     201e:	90 e0       	ldi	r25, 0x00	; 0
     2020:	0e 94 6e 00 	call	0xdc	; 0xdc <Stack_Creation>
     Stack_Push(&TrafficStack,Red);
-    2024:	86 ec       	ldi	r24, 0xC6	; 198
+    2024:	84 ec       	ldi	r24, 0xC4	; 196
     2026:	90 e0       	ldi	r25, 0x00	; 0
     2028:	47 e0       	ldi	r20, 0x07	; 7
     202a:	50 e0       	ldi	r21, 0x00	; 0
@@ -5435,7 +5440,7 @@ void TrafficLightInit(void)
     202e:	70 e0       	ldi	r23, 0x00	; 0
     2030:	0e 94 8e 00 	call	0x11c	; 0x11c <Stack_Push>
     Stack_Push(&TrafficStack,Yellow);
-    2034:	86 ec       	ldi	r24, 0xC6	; 198
+    2034:	84 ec       	ldi	r24, 0xC4	; 196
     2036:	90 e0       	ldi	r25, 0x00	; 0
     2038:	46 e0       	ldi	r20, 0x06	; 6
     203a:	50 e0       	ldi	r21, 0x00	; 0
@@ -5443,7 +5448,7 @@ void TrafficLightInit(void)
     203e:	70 e0       	ldi	r23, 0x00	; 0
     2040:	0e 94 8e 00 	call	0x11c	; 0x11c <Stack_Push>
     Stack_Push(&TrafficStack,Green);
-    2044:	86 ec       	ldi	r24, 0xC6	; 198
+    2044:	84 ec       	ldi	r24, 0xC4	; 196
     2046:	90 e0       	ldi	r25, 0x00	; 0
     2048:	45 e0       	ldi	r20, 0x05	; 5
     204a:	50 e0       	ldi	r21, 0x00	; 0
@@ -5494,23 +5499,23 @@ void TrafficLightMainFunction(void)
     2098:	cd 01       	movw	r24, r26
     209a:	0e 94 60 0e 	call	0x1cc0	; 0x1cc0 <CLCD_voidWriteNumber>
     if (TrafficStack.top != NULL) {
-    209e:	80 91 c6 00 	lds	r24, 0x00C6
-    20a2:	90 91 c7 00 	lds	r25, 0x00C7
+    209e:	80 91 c4 00 	lds	r24, 0x00C4
+    20a2:	90 91 c5 00 	lds	r25, 0x00C5
     20a6:	00 97       	sbiw	r24, 0x00	; 0
     20a8:	a1 f0       	breq	.+40     	; 0x20d2 <TrafficLightMainFunction+0x74>
         CLCD_voidGoToXY(1, 8);
     20aa:	81 e0       	ldi	r24, 0x01	; 1
     20ac:	68 e0       	ldi	r22, 0x08	; 8
     20ae:	0e 94 42 0e 	call	0x1c84	; 0x1c84 <CLCD_voidGoToXY>
-        CLCD_voidSendString("Size: ");
+        CLCD_voidSendString(" Size: ");
     20b2:	86 e9       	ldi	r24, 0x96	; 150
     20b4:	90 e0       	ldi	r25, 0x00	; 0
     20b6:	0e 94 19 0e 	call	0x1c32	; 0x1c32 <CLCD_voidSendString>
         CLCD_voidWriteNumber(TrafficStack.Size);
-    20ba:	80 91 c8 00 	lds	r24, 0x00C8
-    20be:	90 91 c9 00 	lds	r25, 0x00C9
-    20c2:	a0 91 ca 00 	lds	r26, 0x00CA
-    20c6:	b0 91 cb 00 	lds	r27, 0x00CB
+    20ba:	80 91 c6 00 	lds	r24, 0x00C6
+    20be:	90 91 c7 00 	lds	r25, 0x00C7
+    20c2:	a0 91 c8 00 	lds	r26, 0x00C8
+    20c6:	b0 91 c9 00 	lds	r27, 0x00C9
     20ca:	bc 01       	movw	r22, r24
     20cc:	cd 01       	movw	r24, r26
     20ce:	0e 94 60 0e 	call	0x1cc0	; 0x1cc0 <CLCD_voidWriteNumber>
@@ -5651,8 +5656,8 @@ int main()
     2196:	10 f4       	brcc	.+4      	; 0x219c <malloc+0x10>
     2198:	62 e0       	ldi	r22, 0x02	; 2
     219a:	70 e0       	ldi	r23, 0x00	; 0
-    219c:	a0 91 ce 00 	lds	r26, 0x00CE
-    21a0:	b0 91 cf 00 	lds	r27, 0x00CF
+    219c:	a0 91 cc 00 	lds	r26, 0x00CC
+    21a0:	b0 91 cd 00 	lds	r27, 0x00CD
     21a4:	ed 01       	movw	r28, r26
     21a6:	e0 e0       	ldi	r30, 0x00	; 0
     21a8:	f0 e0       	ldi	r31, 0x00	; 0
@@ -5671,8 +5676,8 @@ int main()
     21c2:	93 83       	std	Z+3, r25	; 0x03
     21c4:	82 83       	std	Z+2, r24	; 0x02
     21c6:	04 c0       	rjmp	.+8      	; 0x21d0 <malloc+0x44>
-    21c8:	90 93 cf 00 	sts	0x00CF, r25
-    21cc:	80 93 ce 00 	sts	0x00CE, r24
+    21c8:	90 93 cd 00 	sts	0x00CD, r25
+    21cc:	80 93 cc 00 	sts	0x00CC, r24
     21d0:	fe 01       	movw	r30, r28
     21d2:	34 c0       	rjmp	.+104    	; 0x223c <malloc+0xb0>
     21d4:	68 17       	cp	r22, r24
@@ -5722,8 +5727,8 @@ int main()
     222c:	93 83       	std	Z+3, r25	; 0x03
     222e:	82 83       	std	Z+2, r24	; 0x02
     2230:	04 c0       	rjmp	.+8      	; 0x223a <malloc+0xae>
-    2232:	90 93 cf 00 	sts	0x00CF, r25
-    2236:	80 93 ce 00 	sts	0x00CE, r24
+    2232:	90 93 cd 00 	sts	0x00CD, r25
+    2236:	80 93 cc 00 	sts	0x00CC, r24
     223a:	fd 01       	movw	r30, r26
     223c:	32 96       	adiw	r30, 0x02	; 2
     223e:	4f c0       	rjmp	.+158    	; 0x22de <malloc+0x152>
@@ -5746,27 +5751,27 @@ int main()
     2260:	d9 01       	movw	r26, r18
     2262:	10 97       	sbiw	r26, 0x00	; 0
     2264:	a1 f6       	brne	.-88     	; 0x220e <malloc+0x82>
-    2266:	80 91 cc 00 	lds	r24, 0x00CC
-    226a:	90 91 cd 00 	lds	r25, 0x00CD
+    2266:	80 91 ca 00 	lds	r24, 0x00CA
+    226a:	90 91 cb 00 	lds	r25, 0x00CB
     226e:	89 2b       	or	r24, r25
     2270:	41 f4       	brne	.+16     	; 0x2282 <malloc+0xf6>
-    2272:	80 91 9f 00 	lds	r24, 0x009F
-    2276:	90 91 a0 00 	lds	r25, 0x00A0
-    227a:	90 93 cd 00 	sts	0x00CD, r25
-    227e:	80 93 cc 00 	sts	0x00CC, r24
-    2282:	40 91 a1 00 	lds	r20, 0x00A1
-    2286:	50 91 a2 00 	lds	r21, 0x00A2
+    2272:	80 91 a0 00 	lds	r24, 0x00A0
+    2276:	90 91 a1 00 	lds	r25, 0x00A1
+    227a:	90 93 cb 00 	sts	0x00CB, r25
+    227e:	80 93 ca 00 	sts	0x00CA, r24
+    2282:	40 91 a2 00 	lds	r20, 0x00A2
+    2286:	50 91 a3 00 	lds	r21, 0x00A3
     228a:	41 15       	cp	r20, r1
     228c:	51 05       	cpc	r21, r1
     228e:	41 f4       	brne	.+16     	; 0x22a0 <malloc+0x114>
     2290:	4d b7       	in	r20, 0x3d	; 61
     2292:	5e b7       	in	r21, 0x3e	; 62
-    2294:	80 91 9d 00 	lds	r24, 0x009D
-    2298:	90 91 9e 00 	lds	r25, 0x009E
+    2294:	80 91 9e 00 	lds	r24, 0x009E
+    2298:	90 91 9f 00 	lds	r25, 0x009F
     229c:	48 1b       	sub	r20, r24
     229e:	59 0b       	sbc	r21, r25
-    22a0:	20 91 cc 00 	lds	r18, 0x00CC
-    22a4:	30 91 cd 00 	lds	r19, 0x00CD
+    22a0:	20 91 ca 00 	lds	r18, 0x00CA
+    22a4:	30 91 cb 00 	lds	r19, 0x00CB
     22a8:	24 17       	cp	r18, r20
     22aa:	35 07       	cpc	r19, r21
     22ac:	b0 f4       	brcc	.+44     	; 0x22da <malloc+0x14e>
@@ -5784,8 +5789,8 @@ int main()
     22c4:	50 f0       	brcs	.+20     	; 0x22da <malloc+0x14e>
     22c6:	42 0f       	add	r20, r18
     22c8:	53 1f       	adc	r21, r19
-    22ca:	50 93 cd 00 	sts	0x00CD, r21
-    22ce:	40 93 cc 00 	sts	0x00CC, r20
+    22ca:	50 93 cb 00 	sts	0x00CB, r21
+    22ce:	40 93 ca 00 	sts	0x00CA, r20
     22d2:	f9 01       	movw	r30, r18
     22d4:	61 93       	st	Z+, r22
     22d6:	71 93       	st	Z+, r23
@@ -5807,8 +5812,8 @@ int main()
     22f2:	22 97       	sbiw	r28, 0x02	; 2
     22f4:	1b 82       	std	Y+3, r1	; 0x03
     22f6:	1a 82       	std	Y+2, r1	; 0x02
-    22f8:	a0 91 ce 00 	lds	r26, 0x00CE
-    22fc:	b0 91 cf 00 	lds	r27, 0x00CF
+    22f8:	a0 91 cc 00 	lds	r26, 0x00CC
+    22fc:	b0 91 cd 00 	lds	r27, 0x00CD
     2300:	10 97       	sbiw	r26, 0x00	; 0
     2302:	09 f1       	breq	.+66     	; 0x2346 <free+0x60>
     2304:	40 e0       	ldi	r20, 0x00	; 0
@@ -5844,8 +5849,8 @@ int main()
     2340:	41 15       	cp	r20, r1
     2342:	51 05       	cpc	r21, r1
     2344:	71 f4       	brne	.+28     	; 0x2362 <free+0x7c>
-    2346:	d0 93 cf 00 	sts	0x00CF, r29
-    234a:	c0 93 ce 00 	sts	0x00CE, r28
+    2346:	d0 93 cd 00 	sts	0x00CD, r29
+    234a:	c0 93 cc 00 	sts	0x00CC, r28
     234e:	20 c0       	rjmp	.+64     	; 0x2390 <free+0xaa>
     2350:	12 96       	adiw	r26, 0x02	; 2
     2352:	8d 91       	ld	r24, X+
@@ -5893,8 +5898,8 @@ int main()
     23a4:	35 96       	adiw	r30, 0x05	; 5
     23a6:	61 91       	ld	r22, Z+
     23a8:	71 91       	ld	r23, Z+
-    23aa:	80 91 d2 00 	lds	r24, 0x00D2
-    23ae:	90 91 d3 00 	lds	r25, 0x00D3
+    23aa:	80 91 d0 00 	lds	r24, 0x00D0
+    23ae:	90 91 d1 00 	lds	r25, 0x00D1
     23b2:	af 01       	movw	r20, r30
     23b4:	0e 94 e0 11 	call	0x23c0	; 0x23c0 <vfprintf>
     23b8:	20 96       	adiw	r28, 0x00	; 0

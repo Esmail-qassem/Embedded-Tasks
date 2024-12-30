@@ -6,6 +6,8 @@
 Stack TrafficStack;
 int static timer_counter=0;
 StackEnery Local_Variable=Green;
+int variable;
+
 
 void test(void) {
 	timer_counter++;
@@ -79,7 +81,7 @@ void TrafficLightMainFunction(void)
 	CLCD_voidWriteNumber(timer_counter);
     if (TrafficStack.top != NULL) {
         CLCD_voidGoToXY(1, 8);
-        CLCD_voidSendString(" Size: ");
+        CLCD_voidSendString("Size: ");
         CLCD_voidWriteNumber(TrafficStack.Size);
     }
 

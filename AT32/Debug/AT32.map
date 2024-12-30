@@ -37,7 +37,6 @@ Allocating common symbols
 Common symbol       size              file
 
 __brkval            0x2               d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(malloc.o)
-variable            0x2               ./App/TrafficLights/src/TrafficLightsControl.o
 TrafficStack        0x6               ./App/TrafficLights/src/TrafficLightsControl.o
 __flp               0x2               d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(malloc.o)
 __iob               0x6               d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(iob.o)
@@ -566,40 +565,39 @@ LOAD d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  .data          0x00800080        0x0 ./BSW/MCAL/DIO/src/DIO_Program.o
  .data          0x00800080        0x0 ./BSW/MCAL/ADC/src/ADC_program.o
  .data          0x00800080        0x0 ./BSW/HAL/CLCD/src/CLCD_program.o
- .data          0x00800080       0x1d ./App/TrafficLights/src/TrafficLightsControl.o
- .data          0x0080009d        0x0 ./App/main.o
- .data          0x0080009d        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
- .data          0x0080009d        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodsi4.o)
- .data          0x0080009d        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .data          0x0080009d        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .data          0x0080009d        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .data          0x0080009d        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
- .data          0x0080009d        0x6 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(malloc.o)
-                0x0080009f                __malloc_heap_start
-                0x008000a1                __malloc_heap_end
-                0x0080009d                __malloc_margin
- .data          0x008000a3        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(printf.o)
- .data          0x008000a3        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
- .data          0x008000a3        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
- .data          0x008000a3        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen.o)
- .data          0x008000a3        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fputc.o)
- .data          0x008000a3        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(iob.o)
- .data          0x008000a3        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
- .data          0x008000a3        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
- .data          0x008000a3        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+ .data          0x00800080       0x1e ./App/TrafficLights/src/TrafficLightsControl.o
+ .data          0x0080009e        0x0 ./App/main.o
+ .data          0x0080009e        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .data          0x0080009e        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodsi4.o)
+ .data          0x0080009e        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x0080009e        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .data          0x0080009e        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .data          0x0080009e        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .data          0x0080009e        0x6 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(malloc.o)
+                0x008000a0                __malloc_heap_start
+                0x008000a2                __malloc_heap_end
+                0x0080009e                __malloc_margin
+ .data          0x008000a4        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(printf.o)
+ .data          0x008000a4        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
+ .data          0x008000a4        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
+ .data          0x008000a4        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen.o)
+ .data          0x008000a4        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fputc.o)
+ .data          0x008000a4        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(iob.o)
+ .data          0x008000a4        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
+ .data          0x008000a4        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+ .data          0x008000a4        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
  *(.data*)
  .data.Local_Variable
-                0x008000a3        0x4 ./App/TrafficLights/src/TrafficLightsControl.o
-                0x008000a3                Local_Variable
+                0x008000a4        0x4 ./App/TrafficLights/src/TrafficLightsControl.o
+                0x008000a4                Local_Variable
  *(.rodata)
  *(.rodata*)
  *(.gnu.linkonce.d*)
                 0x008000a8                . = ALIGN (0x2)
- *fill*         0x008000a7        0x1 00
                 0x008000a8                _edata = .
                 0x008000a8                PROVIDE (__data_end, .)
 
-.bss            0x008000a8       0x2e
+.bss            0x008000a8       0x2c
                 0x008000a8                PROVIDE (__bss_start, .)
  *(.bss)
  .bss           0x008000a8        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
@@ -661,24 +659,23 @@ LOAD d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  .bss.timer_counter
                 0x008000c2        0x2 ./App/TrafficLights/src/TrafficLightsControl.o
  *(COMMON)
- COMMON         0x008000c4        0x8 ./App/TrafficLights/src/TrafficLightsControl.o
-                0x008000c4                variable
-                0x008000c6                TrafficStack
- COMMON         0x008000cc        0x4 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(malloc.o)
-                0x008000cc                __brkval
-                0x008000ce                __flp
- COMMON         0x008000d0        0x6 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(iob.o)
-                0x008000d0                __iob
-                0x008000d6                PROVIDE (__bss_end, .)
+ COMMON         0x008000c4        0x6 ./App/TrafficLights/src/TrafficLightsControl.o
+                0x008000c4                TrafficStack
+ COMMON         0x008000ca        0x4 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(malloc.o)
+                0x008000ca                __brkval
+                0x008000cc                __flp
+ COMMON         0x008000ce        0x6 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(iob.o)
+                0x008000ce                __iob
+                0x008000d4                PROVIDE (__bss_end, .)
                 0x0000292c                __data_load_start = LOADADDR (.data)
                 0x00002974                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x008000d6        0x0
-                0x008000d6                PROVIDE (__noinit_start, .)
+.noinit         0x008000d4        0x0
+                0x008000d4                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x008000d6                PROVIDE (__noinit_end, .)
-                0x008000d6                _end = .
-                0x008000d6                PROVIDE (__heap_start, .)
+                0x008000d4                PROVIDE (__noinit_end, .)
+                0x008000d4                _end = .
+                0x008000d4                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -696,7 +693,7 @@ LOAD d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .signature
  *(.signature*)
 
-.stab           0x00000000     0x4308
+.stab           0x00000000     0x4314
  *(.stab)
  .stab          0x00000000      0x960 ./Services/Stack/Stack.o
  .stab          0x00000960      0x5b8 ./BSW/MCAL/TIMER2/src/TIMER2_program.o
@@ -717,14 +714,14 @@ LOAD d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
                                 0x504 (size before relaxing)
  .stab          0x000033b4      0x708 ./BSW/HAL/CLCD/src/CLCD_program.o
                                 0x714 (size before relaxing)
- .stab          0x00003abc      0x5e8 ./App/TrafficLights/src/TrafficLightsControl.o
-                                0x5f4 (size before relaxing)
- .stab          0x000040a4      0x264 ./App/main.o
+ .stab          0x00003abc      0x5f4 ./App/TrafficLights/src/TrafficLightsControl.o
+                                0x600 (size before relaxing)
+ .stab          0x000040b0      0x264 ./App/main.o
                                 0x270 (size before relaxing)
 
-.stabstr        0x00000000     0x380c
+.stabstr        0x00000000     0x37fc
  *(.stabstr)
- .stabstr       0x00000000     0x380c ./Services/Stack/Stack.o
+ .stabstr       0x00000000     0x37fc ./Services/Stack/Stack.o
 
 .stab.excl
  *(.stab.excl)

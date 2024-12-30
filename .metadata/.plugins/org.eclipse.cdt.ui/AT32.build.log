@@ -1,12 +1,12 @@
-05:42:12 **** Incremental Build of configuration Debug for project AT32 ****
+05:46:49 **** Incremental Build of configuration Debug for project AT32 ****
 make all 
 Building file: ../App/TrafficLights/src/TrafficLightsControl.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/TrafficLights/src/TrafficLightsControl.d" -MT"App/TrafficLights/src/TrafficLightsControl.o" -c -o "App/TrafficLights/src/TrafficLightsControl.o" "../App/TrafficLights/src/TrafficLightsControl.c"
 ../App/TrafficLights/src/TrafficLightsControl.c: In function 'TrafficLightMainFunction':
-../App/TrafficLights/src/TrafficLightsControl.c:94: warning: pointer targets in passing argument 1 of 'CLCD_voidSendString' differ in signedness
-../App/TrafficLights/src/TrafficLightsControl.c:96: warning: pointer targets in passing argument 1 of 'CLCD_voidSendString' differ in signedness
-../App/TrafficLights/src/TrafficLightsControl.c:100: warning: pointer targets in passing argument 1 of 'CLCD_voidSendString' differ in signedness
+../App/TrafficLights/src/TrafficLightsControl.c:76: warning: pointer targets in passing argument 1 of 'CLCD_voidSendString' differ in signedness
+../App/TrafficLights/src/TrafficLightsControl.c:78: warning: pointer targets in passing argument 1 of 'CLCD_voidSendString' differ in signedness
+../App/TrafficLights/src/TrafficLightsControl.c:82: warning: pointer targets in passing argument 1 of 'CLCD_voidSendString' differ in signedness
 Finished building: ../App/TrafficLights/src/TrafficLightsControl.c
  
 Building target: AT32.elf
@@ -31,12 +31,12 @@ Device: atmega32
 Program:   10612 bytes (32.4% Full)
 (.text + .data + .bootloader)
 
-Data:        118 bytes (5.8% Full)
+Data:        116 bytes (5.7% Full)
 (.data + .bss + .noinit)
 
 
 Finished building: sizedummy
  
 
-05:42:13 Build Finished. 0 errors, 3 warnings. (took 917ms)
+05:46:50 Build Finished. 0 errors, 3 warnings. (took 898ms)
 
