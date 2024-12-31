@@ -8,13 +8,6 @@
 #ifndef APP_TRAFFICLIGHTS_INC_TRAFFICLIGHTSCONTROL_PRIVATE_H_
 #define APP_TRAFFICLIGHTS_INC_TRAFFICLIGHTSCONTROL_PRIVATE_H_
 
-typedef enum
-{
-	Green=5,
-	Yellow,
-	Red,
-	Reset
-}Traffic_State;
 
 #define GREEN_DURATION  5
 #define YELLOW_DURATION 5

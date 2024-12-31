@@ -3,13 +3,14 @@
 
 #define MAX_SIZE 5
 
-typedef uint32 StackEnery ;
+typedef void (*pFunc)(void);
+typedef pFunc StackEntry;
 
 typedef struct stacknode
 {
 
 struct stacknode * Next;
-StackEnery entry;
+StackEntry entry;
 
 }StackNode;
 
@@ -27,11 +28,11 @@ typedef enum
 
 
 Status Stack_Creation(Stack* My_Stack);
-Status Stack_Push(Stack* My_Stack,StackEnery Variable);
-Status Stack_Pop(Stack* My_Stack,StackEnery* Variable);
+Status Stack_Push(Stack* My_Stack,StackEntry Variable);
+Status Stack_Pop(Stack* My_Stack,StackEntry* Variable);
 Status Stack_Display(Stack* My_Stack);
 Status Clear_Stack(Stack* My_Stack);
-Status Stack_Size(Stack* My_Stack,StackEnery* Variable);
+Status Stack_Size(Stack* My_Stack,StackEntry* Variable);
 
 
 

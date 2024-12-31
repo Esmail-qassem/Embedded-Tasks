@@ -37,6 +37,7 @@ Allocating common symbols
 Common symbol       size              file
 
 __brkval            0x2               d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(malloc.o)
+Local_Variable      0x2               ./App/TrafficLights/src/TrafficLightsControl.o
 TrafficStack        0x6               ./App/TrafficLights/src/TrafficLightsControl.o
 __flp               0x2               d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(malloc.o)
 __iob               0x6               d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(iob.o)
@@ -161,7 +162,7 @@ LOAD d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x292c
+.text           0x00000000     0x28a6
  *(.vectors)
  .vectors       0x00000000       0x54 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
                 0x00000000                __vectors
@@ -264,271 +265,275 @@ LOAD d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
                 0x000000dc       0x40 ./Services/Stack/Stack.o
                 0x000000dc                Stack_Creation
  .text.Stack_Push
-                0x0000011c       0xa8 ./Services/Stack/Stack.o
+                0x0000011c       0x9c ./Services/Stack/Stack.o
                 0x0000011c                Stack_Push
  .text.Stack_Pop
-                0x000001c4       0xbe ./Services/Stack/Stack.o
-                0x000001c4                Stack_Pop
+                0x000001b8       0xb4 ./Services/Stack/Stack.o
+                0x000001b8                Stack_Pop
  .text.Stack_Display
-                0x00000282       0xaa ./Services/Stack/Stack.o
-                0x00000282                Stack_Display
+                0x0000026c       0x98 ./Services/Stack/Stack.o
+                0x0000026c                Stack_Display
  .text.Clear_Stack
-                0x0000032c       0x7c ./Services/Stack/Stack.o
-                0x0000032c                Clear_Stack
+                0x00000304       0x7c ./Services/Stack/Stack.o
+                0x00000304                Clear_Stack
  .text.Stack_Size
-                0x000003a8       0x4e ./Services/Stack/Stack.o
-                0x000003a8                Stack_Size
+                0x00000380       0x4a ./Services/Stack/Stack.o
+                0x00000380                Stack_Size
  .text.TIMER2_DutyCycle
-                0x000003f6       0x48 ./BSW/MCAL/TIMER2/src/TIMER2_program.o
-                0x000003f6                TIMER2_DutyCycle
+                0x000003ca       0x48 ./BSW/MCAL/TIMER2/src/TIMER2_program.o
+                0x000003ca                TIMER2_DutyCycle
  .text.TIMER2_Delay
-                0x0000043e       0x52 ./BSW/MCAL/TIMER2/src/TIMER2_program.o
-                0x0000043e                TIMER2_Delay
+                0x00000412       0x52 ./BSW/MCAL/TIMER2/src/TIMER2_program.o
+                0x00000412                TIMER2_Delay
  .text.TIMER2_voidInit
-                0x00000490       0x44 ./BSW/MCAL/TIMER2/src/TIMER2_program.o
-                0x00000490                TIMER2_voidInit
+                0x00000464       0x44 ./BSW/MCAL/TIMER2/src/TIMER2_program.o
+                0x00000464                TIMER2_voidInit
  .text.TIMER2_voiSetPreLoadValue
-                0x000004d4       0x1c ./BSW/MCAL/TIMER2/src/TIMER2_program.o
-                0x000004d4                TIMER2_voiSetPreLoadValue
+                0x000004a8       0x1c ./BSW/MCAL/TIMER2/src/TIMER2_program.o
+                0x000004a8                TIMER2_voiSetPreLoadValue
  .text.TIMER2_voiSetCompareMatchValue
-                0x000004f0       0x1c ./BSW/MCAL/TIMER2/src/TIMER2_program.o
-                0x000004f0                TIMER2_voiSetCompareMatchValue
+                0x000004c4       0x1c ./BSW/MCAL/TIMER2/src/TIMER2_program.o
+                0x000004c4                TIMER2_voiSetCompareMatchValue
  .text.Timer2_Timer2OVFCallBackFunc
-                0x0000050c       0x3a ./BSW/MCAL/TIMER2/src/TIMER2_program.o
-                0x0000050c                Timer2_Timer2OVFCallBackFunc
+                0x000004e0       0x3a ./BSW/MCAL/TIMER2/src/TIMER2_program.o
+                0x000004e0                Timer2_Timer2OVFCallBackFunc
  .text.Timer2_Timer2CTCCallBackFunc
-                0x00000546       0x3a ./BSW/MCAL/TIMER2/src/TIMER2_program.o
-                0x00000546                Timer2_Timer2CTCCallBackFunc
+                0x0000051a       0x3a ./BSW/MCAL/TIMER2/src/TIMER2_program.o
+                0x0000051a                Timer2_Timer2CTCCallBackFunc
  .text.__vector_4
-                0x00000580       0x5a ./BSW/MCAL/TIMER2/src/TIMER2_program.o
-                0x00000580                __vector_4
+                0x00000554       0x5a ./BSW/MCAL/TIMER2/src/TIMER2_program.o
+                0x00000554                __vector_4
  .text.__vector_5
-                0x000005da       0x5a ./BSW/MCAL/TIMER2/src/TIMER2_program.o
-                0x000005da                __vector_5
+                0x000005ae       0x5a ./BSW/MCAL/TIMER2/src/TIMER2_program.o
+                0x000005ae                __vector_5
  .text.TIMER1_voidInit
-                0x00000634       0x4e ./BSW/MCAL/TIMER1/src/TIMER1_program.o
-                0x00000634                TIMER1_voidInit
+                0x00000608       0x4e ./BSW/MCAL/TIMER1/src/TIMER1_program.o
+                0x00000608                TIMER1_voidInit
  .text.TIMER1_voidSetChannelACompMatch
-                0x00000682       0x24 ./BSW/MCAL/TIMER1/src/TIMER1_program.o
-                0x00000682                TIMER1_voidSetChannelACompMatch
+                0x00000656       0x24 ./BSW/MCAL/TIMER1/src/TIMER1_program.o
+                0x00000656                TIMER1_voidSetChannelACompMatch
  .text.TIMER1_voidSetChannelBCompMatch
-                0x000006a6       0x24 ./BSW/MCAL/TIMER1/src/TIMER1_program.o
-                0x000006a6                TIMER1_voidSetChannelBCompMatch
+                0x0000067a       0x24 ./BSW/MCAL/TIMER1/src/TIMER1_program.o
+                0x0000067a                TIMER1_voidSetChannelBCompMatch
  .text.TIMER1_voidSetICR
-                0x000006ca       0x24 ./BSW/MCAL/TIMER1/src/TIMER1_program.o
-                0x000006ca                TIMER1_voidSetICR
+                0x0000069e       0x24 ./BSW/MCAL/TIMER1/src/TIMER1_program.o
+                0x0000069e                TIMER1_voidSetICR
  .text.TIMER1_voidSetTimerValue
-                0x000006ee       0x24 ./BSW/MCAL/TIMER1/src/TIMER1_program.o
-                0x000006ee                TIMER1_voidSetTimerValue
+                0x000006c2       0x24 ./BSW/MCAL/TIMER1/src/TIMER1_program.o
+                0x000006c2                TIMER1_voidSetTimerValue
  .text.TIMER1_uint16GetTimerValue
-                0x00000712       0x16 ./BSW/MCAL/TIMER1/src/TIMER1_program.o
-                0x00000712                TIMER1_uint16GetTimerValue
+                0x000006e6       0x16 ./BSW/MCAL/TIMER1/src/TIMER1_program.o
+                0x000006e6                TIMER1_uint16GetTimerValue
  .text.TIMER1_CTCASetCallBck
-                0x00000728       0x3a ./BSW/MCAL/TIMER1/src/TIMER1_program.o
-                0x00000728                TIMER1_CTCASetCallBck
+                0x000006fc       0x3a ./BSW/MCAL/TIMER1/src/TIMER1_program.o
+                0x000006fc                TIMER1_CTCASetCallBck
  .text.TIMER1_CTCBSetCallBck
-                0x00000762       0x3a ./BSW/MCAL/TIMER1/src/TIMER1_program.o
-                0x00000762                TIMER1_CTCBSetCallBck
+                0x00000736       0x3a ./BSW/MCAL/TIMER1/src/TIMER1_program.o
+                0x00000736                TIMER1_CTCBSetCallBck
  .text.TIMER1_OVSetCallBck
-                0x0000079c       0x3a ./BSW/MCAL/TIMER1/src/TIMER1_program.o
-                0x0000079c                TIMER1_OVSetCallBck
+                0x00000770       0x3a ./BSW/MCAL/TIMER1/src/TIMER1_program.o
+                0x00000770                TIMER1_OVSetCallBck
  .text.TIMER1_CAPTURESetCallBck
-                0x000007d6       0x3a ./BSW/MCAL/TIMER1/src/TIMER1_program.o
-                0x000007d6                TIMER1_CAPTURESetCallBck
+                0x000007aa       0x3a ./BSW/MCAL/TIMER1/src/TIMER1_program.o
+                0x000007aa                TIMER1_CAPTURESetCallBck
  .text.__vector_6
-                0x00000810       0x64 ./BSW/MCAL/TIMER1/src/TIMER1_program.o
-                0x00000810                __vector_6
+                0x000007e4       0x64 ./BSW/MCAL/TIMER1/src/TIMER1_program.o
+                0x000007e4                __vector_6
  .text.__vector_7
-                0x00000874       0x5a ./BSW/MCAL/TIMER1/src/TIMER1_program.o
-                0x00000874                __vector_7
+                0x00000848       0x5a ./BSW/MCAL/TIMER1/src/TIMER1_program.o
+                0x00000848                __vector_7
  .text.__vector_8
-                0x000008ce       0x5a ./BSW/MCAL/TIMER1/src/TIMER1_program.o
-                0x000008ce                __vector_8
+                0x000008a2       0x5a ./BSW/MCAL/TIMER1/src/TIMER1_program.o
+                0x000008a2                __vector_8
  .text.__vector_9
-                0x00000928       0x5a ./BSW/MCAL/TIMER1/src/TIMER1_program.o
-                0x00000928                __vector_9
+                0x000008fc       0x5a ./BSW/MCAL/TIMER1/src/TIMER1_program.o
+                0x000008fc                __vector_9
  .text.TIMER0_DutyCycle
-                0x00000982       0x48 ./BSW/MCAL/TIMER0/src/TIMER0_program.o
-                0x00000982                TIMER0_DutyCycle
+                0x00000956       0x48 ./BSW/MCAL/TIMER0/src/TIMER0_program.o
+                0x00000956                TIMER0_DutyCycle
  .text.TIMER0_Delay
-                0x000009ca       0x52 ./BSW/MCAL/TIMER0/src/TIMER0_program.o
-                0x000009ca                TIMER0_Delay
+                0x0000099e       0x52 ./BSW/MCAL/TIMER0/src/TIMER0_program.o
+                0x0000099e                TIMER0_Delay
  .text.TIMER0_voidInit
-                0x00000a1c       0x44 ./BSW/MCAL/TIMER0/src/TIMER0_program.o
-                0x00000a1c                TIMER0_voidInit
+                0x000009f0       0x44 ./BSW/MCAL/TIMER0/src/TIMER0_program.o
+                0x000009f0                TIMER0_voidInit
  .text.TIMER0_voiSetPreLoadValue
-                0x00000a60       0x1c ./BSW/MCAL/TIMER0/src/TIMER0_program.o
-                0x00000a60                TIMER0_voiSetPreLoadValue
+                0x00000a34       0x1c ./BSW/MCAL/TIMER0/src/TIMER0_program.o
+                0x00000a34                TIMER0_voiSetPreLoadValue
  .text.TIMER0_voiSetCompareMatchValue
-                0x00000a7c       0x1c ./BSW/MCAL/TIMER0/src/TIMER0_program.o
-                0x00000a7c                TIMER0_voiSetCompareMatchValue
+                0x00000a50       0x1c ./BSW/MCAL/TIMER0/src/TIMER0_program.o
+                0x00000a50                TIMER0_voiSetCompareMatchValue
  .text.Timer0_Timer0OVFCallBackFunc
-                0x00000a98       0x3a ./BSW/MCAL/TIMER0/src/TIMER0_program.o
-                0x00000a98                Timer0_Timer0OVFCallBackFunc
+                0x00000a6c       0x3a ./BSW/MCAL/TIMER0/src/TIMER0_program.o
+                0x00000a6c                Timer0_Timer0OVFCallBackFunc
  .text.Timer0_Timer0CTCCallBackFunc
-                0x00000ad2       0x3a ./BSW/MCAL/TIMER0/src/TIMER0_program.o
-                0x00000ad2                Timer0_Timer0CTCCallBackFunc
+                0x00000aa6       0x3a ./BSW/MCAL/TIMER0/src/TIMER0_program.o
+                0x00000aa6                Timer0_Timer0CTCCallBackFunc
  .text.__vector_10
-                0x00000b0c       0x5a ./BSW/MCAL/TIMER0/src/TIMER0_program.o
-                0x00000b0c                __vector_10
+                0x00000ae0       0x5a ./BSW/MCAL/TIMER0/src/TIMER0_program.o
+                0x00000ae0                __vector_10
  .text.__vector_11
-                0x00000b66       0x5a ./BSW/MCAL/TIMER0/src/TIMER0_program.o
-                0x00000b66                __vector_11
+                0x00000b3a       0x5a ./BSW/MCAL/TIMER0/src/TIMER0_program.o
+                0x00000b3a                __vector_11
  .text.PORT_voidInit
-                0x00000bc0       0x44 ./BSW/MCAL/PORT/src/PORT_program.o
-                0x00000bc0                PORT_voidInit
+                0x00000b94       0x44 ./BSW/MCAL/PORT/src/PORT_program.o
+                0x00000b94                PORT_voidInit
  .text.GIE_Enable
-                0x00000c04       0x1c ./BSW/MCAL/GIE/src/GIE_program.o
-                0x00000c04                GIE_Enable
+                0x00000bd8       0x1c ./BSW/MCAL/GIE/src/GIE_program.o
+                0x00000bd8                GIE_Enable
  .text.GIE_Disable
-                0x00000c20       0x1c ./BSW/MCAL/GIE/src/GIE_program.o
-                0x00000c20                GIE_Disable
+                0x00000bf4       0x1c ./BSW/MCAL/GIE/src/GIE_program.o
+                0x00000bf4                GIE_Disable
  .text.EXTI_voidInt0Init
-                0x00000c3c       0x38 ./BSW/MCAL/EXT/src/EXTI_program.o
-                0x00000c3c                EXTI_voidInt0Init
+                0x00000c10       0x38 ./BSW/MCAL/EXT/src/EXTI_program.o
+                0x00000c10                EXTI_voidInt0Init
  .text.EXTI_voidInt1Init
-                0x00000c74       0x2a ./BSW/MCAL/EXT/src/EXTI_program.o
-                0x00000c74                EXTI_voidInt1Init
+                0x00000c48       0x2a ./BSW/MCAL/EXT/src/EXTI_program.o
+                0x00000c48                EXTI_voidInt1Init
  .text.EXTI_voidInt2Init
-                0x00000c9e       0x1c ./BSW/MCAL/EXT/src/EXTI_program.o
-                0x00000c9e                EXTI_voidInt2Init
+                0x00000c72       0x1c ./BSW/MCAL/EXT/src/EXTI_program.o
+                0x00000c72                EXTI_voidInt2Init
  .text.EXTI_uint8IntSetSenseControl
-                0x00000cba      0x206 ./BSW/MCAL/EXT/src/EXTI_program.o
-                0x00000cba                EXTI_uint8IntSetSenseControl
+                0x00000c8e      0x206 ./BSW/MCAL/EXT/src/EXTI_program.o
+                0x00000c8e                EXTI_uint8IntSetSenseControl
  .text.EXTI_uint8IntEnable
-                0x00000ec0       0x7c ./BSW/MCAL/EXT/src/EXTI_program.o
-                0x00000ec0                EXTI_uint8IntEnable
+                0x00000e94       0x7c ./BSW/MCAL/EXT/src/EXTI_program.o
+                0x00000e94                EXTI_uint8IntEnable
  .text.EXTI_uint8IntDisable
-                0x00000f3c       0x7c ./BSW/MCAL/EXT/src/EXTI_program.o
-                0x00000f3c                EXTI_uint8IntDisable
+                0x00000f10       0x7c ./BSW/MCAL/EXT/src/EXTI_program.o
+                0x00000f10                EXTI_uint8IntDisable
  .text.EXTI_uint8Int0SetCallBack
-                0x00000fb8       0x3a ./BSW/MCAL/EXT/src/EXTI_program.o
-                0x00000fb8                EXTI_uint8Int0SetCallBack
+                0x00000f8c       0x3a ./BSW/MCAL/EXT/src/EXTI_program.o
+                0x00000f8c                EXTI_uint8Int0SetCallBack
  .text.EXTI_uint8Int1SetCallBack
-                0x00000ff2       0x3a ./BSW/MCAL/EXT/src/EXTI_program.o
-                0x00000ff2                EXTI_uint8Int1SetCallBack
+                0x00000fc6       0x3a ./BSW/MCAL/EXT/src/EXTI_program.o
+                0x00000fc6                EXTI_uint8Int1SetCallBack
  .text.EXTI_uint8Int2SetCallBack
-                0x0000102c       0x3a ./BSW/MCAL/EXT/src/EXTI_program.o
-                0x0000102c                EXTI_uint8Int2SetCallBack
+                0x00001000       0x3a ./BSW/MCAL/EXT/src/EXTI_program.o
+                0x00001000                EXTI_uint8Int2SetCallBack
  .text.__vector_1
-                0x00001066       0x66 ./BSW/MCAL/EXT/src/EXTI_program.o
-                0x00001066                __vector_1
+                0x0000103a       0x66 ./BSW/MCAL/EXT/src/EXTI_program.o
+                0x0000103a                __vector_1
  .text.__vector_2
-                0x000010cc       0x66 ./BSW/MCAL/EXT/src/EXTI_program.o
-                0x000010cc                __vector_2
+                0x000010a0       0x66 ./BSW/MCAL/EXT/src/EXTI_program.o
+                0x000010a0                __vector_2
  .text.__vector_3
-                0x00001132       0x66 ./BSW/MCAL/EXT/src/EXTI_program.o
-                0x00001132                __vector_3
+                0x00001106       0x66 ./BSW/MCAL/EXT/src/EXTI_program.o
+                0x00001106                __vector_3
  .text.DIO_SetPortVal
-                0x00001198       0x96 ./BSW/MCAL/DIO/src/DIO_Program.o
-                0x00001198                DIO_SetPortVal
+                0x0000116c       0x96 ./BSW/MCAL/DIO/src/DIO_Program.o
+                0x0000116c                DIO_SetPortVal
  .text.DIO_SetPinVal
-                0x0000122e      0x21c ./BSW/MCAL/DIO/src/DIO_Program.o
-                0x0000122e                DIO_SetPinVal
+                0x00001202      0x21c ./BSW/MCAL/DIO/src/DIO_Program.o
+                0x00001202                DIO_SetPinVal
  .text.DIO_SetPortDir
-                0x0000144a       0x96 ./BSW/MCAL/DIO/src/DIO_Program.o
-                0x0000144a                DIO_SetPortDir
+                0x0000141e       0x96 ./BSW/MCAL/DIO/src/DIO_Program.o
+                0x0000141e                DIO_SetPortDir
  .text.DIO_SetPinDir
-                0x000014e0      0x21c ./BSW/MCAL/DIO/src/DIO_Program.o
-                0x000014e0                DIO_SetPinDir
+                0x000014b4      0x21c ./BSW/MCAL/DIO/src/DIO_Program.o
+                0x000014b4                DIO_SetPinDir
  .text.DIO_GetPinVal
-                0x000016fc      0x12a ./BSW/MCAL/DIO/src/DIO_Program.o
-                0x000016fc                DIO_GetPinVal
+                0x000016d0      0x12a ./BSW/MCAL/DIO/src/DIO_Program.o
+                0x000016d0                DIO_GetPinVal
  .text.DIO_GetPortVal
-                0x00001826       0xaa ./BSW/MCAL/DIO/src/DIO_Program.o
-                0x00001826                DIO_GetPortVal
+                0x000017fa       0xaa ./BSW/MCAL/DIO/src/DIO_Program.o
+                0x000017fa                DIO_GetPortVal
  .text.ADC_voidInit
-                0x000018d0       0x50 ./BSW/MCAL/ADC/src/ADC_program.o
-                0x000018d0                ADC_voidInit
+                0x000018a4       0x50 ./BSW/MCAL/ADC/src/ADC_program.o
+                0x000018a4                ADC_voidInit
  .text.ADC_uint8StartConversionSynchronus
-                0x00001920       0xda ./BSW/MCAL/ADC/src/ADC_program.o
-                0x00001920                ADC_uint8StartConversionSynchronus
+                0x000018f4       0xda ./BSW/MCAL/ADC/src/ADC_program.o
+                0x000018f4                ADC_uint8StartConversionSynchronus
  .text.ADC_uint8StartConversionASynchronus
-                0x000019fa       0x78 ./BSW/MCAL/ADC/src/ADC_program.o
-                0x000019fa                ADC_uint8StartConversionASynchronus
+                0x000019ce       0x78 ./BSW/MCAL/ADC/src/ADC_program.o
+                0x000019ce                ADC_uint8StartConversionASynchronus
  .text.__vector_16
-                0x00001a72       0x6e ./BSW/MCAL/ADC/src/ADC_program.o
-                0x00001a72                __vector_16
+                0x00001a46       0x6e ./BSW/MCAL/ADC/src/ADC_program.o
+                0x00001a46                __vector_16
  .text.delay_ms
-                0x00001ae0       0x92 ./BSW/HAL/CLCD/src/CLCD_program.o
-                0x00001ae0                delay_ms
+                0x00001ab4       0x92 ./BSW/HAL/CLCD/src/CLCD_program.o
+                0x00001ab4                delay_ms
  .text.CLCD_voidSendCommand
-                0x00001b72       0x4c ./BSW/HAL/CLCD/src/CLCD_program.o
-                0x00001b72                CLCD_voidSendCommand
+                0x00001b46       0x4c ./BSW/HAL/CLCD/src/CLCD_program.o
+                0x00001b46                CLCD_voidSendCommand
  .text.CLCD_voidInit
-                0x00001bbe       0x28 ./BSW/HAL/CLCD/src/CLCD_program.o
-                0x00001bbe                CLCD_voidInit
+                0x00001b92       0x28 ./BSW/HAL/CLCD/src/CLCD_program.o
+                0x00001b92                CLCD_voidInit
  .text.CLCD_voidSendData
-                0x00001be6       0x4c ./BSW/HAL/CLCD/src/CLCD_program.o
-                0x00001be6                CLCD_voidSendData
+                0x00001bba       0x4c ./BSW/HAL/CLCD/src/CLCD_program.o
+                0x00001bba                CLCD_voidSendData
  .text.CLCD_voidSendString
-                0x00001c32       0x52 ./BSW/HAL/CLCD/src/CLCD_program.o
-                0x00001c32                CLCD_voidSendString
+                0x00001c06       0x52 ./BSW/HAL/CLCD/src/CLCD_program.o
+                0x00001c06                CLCD_voidSendString
  .text.CLCD_voidGoToXY
-                0x00001c84       0x3c ./BSW/HAL/CLCD/src/CLCD_program.o
-                0x00001c84                CLCD_voidGoToXY
+                0x00001c58       0x3c ./BSW/HAL/CLCD/src/CLCD_program.o
+                0x00001c58                CLCD_voidGoToXY
  .text.CLCD_voidWriteNumber
-                0x00001cc0      0x11e ./BSW/HAL/CLCD/src/CLCD_program.o
-                0x00001cc0                CLCD_voidWriteNumber
+                0x00001c94      0x11e ./BSW/HAL/CLCD/src/CLCD_program.o
+                0x00001c94                CLCD_voidWriteNumber
  .text.CLCD_voidWriteSpecialChar
-                0x00001dde       0x82 ./BSW/HAL/CLCD/src/CLCD_program.o
-                0x00001dde                CLCD_voidWriteSpecialChar
+                0x00001db2       0x82 ./BSW/HAL/CLCD/src/CLCD_program.o
+                0x00001db2                CLCD_voidWriteSpecialChar
  .text.HandleGreenState
-                0x00001e60       0x22 ./App/TrafficLights/src/TrafficLightsControl.o
+                0x00001e34       0x22 ./App/TrafficLights/src/TrafficLightsControl.o
  .text.HandleRedState
-                0x00001e82       0x2c ./App/TrafficLights/src/TrafficLightsControl.o
+                0x00001e56       0x2c ./App/TrafficLights/src/TrafficLightsControl.o
  .text.HandleyellowState
-                0x00001eae       0x2c ./App/TrafficLights/src/TrafficLightsControl.o
- .text.test     0x00001eda      0x11a ./App/TrafficLights/src/TrafficLightsControl.o
-                0x00001eda                test
+                0x00001e82       0x2c ./App/TrafficLights/src/TrafficLightsControl.o
+ .text.TimerISR
+                0x00001eae       0x20 ./App/TrafficLights/src/TrafficLightsControl.o
+                0x00001eae                TimerISR
  .text.TrafficLightInit
-                0x00001ff4       0x6a ./App/TrafficLights/src/TrafficLightsControl.o
-                0x00001ff4                TrafficLightInit
+                0x00001ece       0x44 ./App/TrafficLights/src/TrafficLightsControl.o
+                0x00001ece                TrafficLightInit
+ .text.Traffic_Handler
+                0x00001f12       0xd0 ./App/TrafficLights/src/TrafficLightsControl.o
+                0x00001f12                Traffic_Handler
  .text.TrafficLightMainFunction
-                0x0000205e       0x7a ./App/TrafficLights/src/TrafficLightsControl.o
-                0x0000205e                TrafficLightMainFunction
- .text.main     0x000020d8       0x12 ./App/main.o
-                0x000020d8                main
- .text.libgcc   0x000020ea       0x28 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
-                0x000020ea                __udivmodhi4
- .text.libgcc   0x00002112       0x36 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodsi4.o)
-                0x00002112                __divmodsi4
- .text.libgcc   0x00002148        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x00002148        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .text.libgcc   0x00002148        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .text.libgcc   0x00002148       0x44 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
-                0x00002148                __udivmodsi4
+                0x00001fe2       0x70 ./App/TrafficLights/src/TrafficLightsControl.o
+                0x00001fe2                TrafficLightMainFunction
+ .text.main     0x00002052       0x12 ./App/main.o
+                0x00002052                main
+ .text.libgcc   0x00002064       0x28 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                0x00002064                __udivmodhi4
+ .text.libgcc   0x0000208c       0x36 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodsi4.o)
+                0x0000208c                __divmodsi4
+ .text.libgcc   0x000020c2        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x000020c2        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x000020c2        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x000020c2       0x44 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                0x000020c2                __udivmodsi4
  .text.avr-libc
-                0x0000218c      0x20a d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(malloc.o)
-                0x0000218c                malloc
-                0x000022e6                free
+                0x00002106      0x20a d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(malloc.o)
+                0x00002106                malloc
+                0x00002260                free
  .text.avr-libc
-                0x00002396       0x2a d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(printf.o)
-                0x00002396                printf
+                0x00002310       0x2a d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(printf.o)
+                0x00002310                printf
  .text.avr-libc
-                0x000023c0      0x3ba d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
-                0x000023c0                vfprintf
+                0x0000233a      0x3ba d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
+                0x0000233a                vfprintf
  .text.avr-libc
-                0x0000277a       0x16 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
-                0x0000277a                strnlen_P
+                0x000026f4       0x16 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
+                0x000026f4                strnlen_P
  .text.avr-libc
-                0x00002790       0x16 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen.o)
-                0x00002790                strnlen
+                0x0000270a       0x16 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen.o)
+                0x0000270a                strnlen
  .text.avr-libc
-                0x000027a6       0x58 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fputc.o)
-                0x000027a6                fputc
+                0x00002720       0x58 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fputc.o)
+                0x00002720                fputc
  .text.avr-libc
-                0x000027fe       0xbc d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
-                0x000027fe                __ultoa_invert
- .text.libgcc   0x000028ba       0x38 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
-                0x000028ba                __prologue_saves__
- .text.libgcc   0x000028f2       0x36 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
-                0x000028f2                __epilogue_restores__
-                0x00002928                . = ALIGN (0x2)
+                0x00002778       0xbc d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
+                0x00002778                __ultoa_invert
+ .text.libgcc   0x00002834       0x38 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+                0x00002834                __prologue_saves__
+ .text.libgcc   0x0000286c       0x36 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+                0x0000286c                __epilogue_restores__
+                0x000028a2                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00002928        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x00002928                exit
-                0x00002928                _exit
+ .fini9         0x000028a2        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x000028a2                exit
+                0x000028a2                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -547,11 +552,11 @@ LOAD d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00002928        0x4 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x000028a2        0x4 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x0000292c                _etext = .
+                0x000028a6                _etext = .
 
-.data           0x00800060       0x48 load address 0x0000292c
+.data           0x00800060       0x28 load address 0x000028a6
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800060        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
@@ -565,117 +570,119 @@ LOAD d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  .data          0x00800080        0x0 ./BSW/MCAL/DIO/src/DIO_Program.o
  .data          0x00800080        0x0 ./BSW/MCAL/ADC/src/ADC_program.o
  .data          0x00800080        0x0 ./BSW/HAL/CLCD/src/CLCD_program.o
- .data          0x00800080       0x1e ./App/TrafficLights/src/TrafficLightsControl.o
- .data          0x0080009e        0x0 ./App/main.o
- .data          0x0080009e        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
- .data          0x0080009e        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodsi4.o)
- .data          0x0080009e        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .data          0x0080009e        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .data          0x0080009e        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .data          0x0080009e        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
- .data          0x0080009e        0x6 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(malloc.o)
-                0x008000a0                __malloc_heap_start
-                0x008000a2                __malloc_heap_end
-                0x0080009e                __malloc_margin
- .data          0x008000a4        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(printf.o)
- .data          0x008000a4        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
- .data          0x008000a4        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
- .data          0x008000a4        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen.o)
- .data          0x008000a4        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fputc.o)
- .data          0x008000a4        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(iob.o)
- .data          0x008000a4        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
- .data          0x008000a4        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
- .data          0x008000a4        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+ .data          0x00800080        0x0 ./App/TrafficLights/src/TrafficLightsControl.o
+ .data          0x00800080        0x0 ./App/main.o
+ .data          0x00800080        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .data          0x00800080        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodsi4.o)
+ .data          0x00800080        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x00800080        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .data          0x00800080        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .data          0x00800080        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .data          0x00800080        0x6 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(malloc.o)
+                0x00800082                __malloc_heap_start
+                0x00800084                __malloc_heap_end
+                0x00800080                __malloc_margin
+ .data          0x00800086        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(printf.o)
+ .data          0x00800086        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
+ .data          0x00800086        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
+ .data          0x00800086        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen.o)
+ .data          0x00800086        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fputc.o)
+ .data          0x00800086        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(iob.o)
+ .data          0x00800086        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
+ .data          0x00800086        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+ .data          0x00800086        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
  *(.data*)
- .data.Local_Variable
-                0x008000a4        0x4 ./App/TrafficLights/src/TrafficLightsControl.o
-                0x008000a4                Local_Variable
+ .data.last_handled_time
+                0x00800086        0x2 ./App/TrafficLights/src/TrafficLightsControl.o
+                0x00800086                last_handled_time
  *(.rodata)
  *(.rodata*)
  *(.gnu.linkonce.d*)
-                0x008000a8                . = ALIGN (0x2)
-                0x008000a8                _edata = .
-                0x008000a8                PROVIDE (__data_end, .)
+                0x00800088                . = ALIGN (0x2)
+                0x00800088                _edata = .
+                0x00800088                PROVIDE (__data_end, .)
 
-.bss            0x008000a8       0x2c
-                0x008000a8                PROVIDE (__bss_start, .)
+.bss            0x00800088       0x2e
+                0x00800088                PROVIDE (__bss_start, .)
  *(.bss)
- .bss           0x008000a8        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
- .bss           0x008000a8        0x0 ./Services/Stack/Stack.o
- .bss           0x008000a8        0x0 ./BSW/MCAL/TIMER2/src/TIMER2_program.o
- .bss           0x008000a8        0x0 ./BSW/MCAL/TIMER1/src/TIMER1_program.o
- .bss           0x008000a8        0x0 ./BSW/MCAL/TIMER0/src/TIMER0_program.o
- .bss           0x008000a8        0x0 ./BSW/MCAL/PORT/src/PORT_program.o
- .bss           0x008000a8        0x0 ./BSW/MCAL/GIE/src/GIE_program.o
- .bss           0x008000a8        0x0 ./BSW/MCAL/EXT/src/EXTI_program.o
- .bss           0x008000a8        0x0 ./BSW/MCAL/DIO/src/DIO_Program.o
- .bss           0x008000a8        0x0 ./BSW/MCAL/ADC/src/ADC_program.o
- .bss           0x008000a8        0x0 ./BSW/HAL/CLCD/src/CLCD_program.o
- .bss           0x008000a8        0x0 ./App/TrafficLights/src/TrafficLightsControl.o
- .bss           0x008000a8        0x0 ./App/main.o
- .bss           0x008000a8        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
- .bss           0x008000a8        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodsi4.o)
- .bss           0x008000a8        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .bss           0x008000a8        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .bss           0x008000a8        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .bss           0x008000a8        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
- .bss           0x008000a8        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(malloc.o)
- .bss           0x008000a8        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(printf.o)
- .bss           0x008000a8        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
- .bss           0x008000a8        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
- .bss           0x008000a8        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen.o)
- .bss           0x008000a8        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fputc.o)
- .bss           0x008000a8        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(iob.o)
- .bss           0x008000a8        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
- .bss           0x008000a8        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
- .bss           0x008000a8        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+ .bss           0x00800088        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .bss           0x00800088        0x0 ./Services/Stack/Stack.o
+ .bss           0x00800088        0x0 ./BSW/MCAL/TIMER2/src/TIMER2_program.o
+ .bss           0x00800088        0x0 ./BSW/MCAL/TIMER1/src/TIMER1_program.o
+ .bss           0x00800088        0x0 ./BSW/MCAL/TIMER0/src/TIMER0_program.o
+ .bss           0x00800088        0x0 ./BSW/MCAL/PORT/src/PORT_program.o
+ .bss           0x00800088        0x0 ./BSW/MCAL/GIE/src/GIE_program.o
+ .bss           0x00800088        0x0 ./BSW/MCAL/EXT/src/EXTI_program.o
+ .bss           0x00800088        0x0 ./BSW/MCAL/DIO/src/DIO_Program.o
+ .bss           0x00800088        0x0 ./BSW/MCAL/ADC/src/ADC_program.o
+ .bss           0x00800088        0x0 ./BSW/HAL/CLCD/src/CLCD_program.o
+ .bss           0x00800088        0x0 ./App/TrafficLights/src/TrafficLightsControl.o
+ .bss           0x00800088        0x0 ./App/main.o
+ .bss           0x00800088        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .bss           0x00800088        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodsi4.o)
+ .bss           0x00800088        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x00800088        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .bss           0x00800088        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .bss           0x00800088        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .bss           0x00800088        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(malloc.o)
+ .bss           0x00800088        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(printf.o)
+ .bss           0x00800088        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
+ .bss           0x00800088        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
+ .bss           0x00800088        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen.o)
+ .bss           0x00800088        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fputc.o)
+ .bss           0x00800088        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(iob.o)
+ .bss           0x00800088        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
+ .bss           0x00800088        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+ .bss           0x00800088        0x0 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
  *(.bss*)
  .bss.Global_PvCompareMatch
-                0x008000a8        0x2 ./BSW/MCAL/TIMER2/src/TIMER2_program.o
+                0x00800088        0x2 ./BSW/MCAL/TIMER2/src/TIMER2_program.o
  .bss.Global_PvOverFlow
-                0x008000aa        0x2 ./BSW/MCAL/TIMER2/src/TIMER2_program.o
+                0x0080008a        0x2 ./BSW/MCAL/TIMER2/src/TIMER2_program.o
  .bss.TIMER1_pvCallBackFunc_CTC_A
-                0x008000ac        0x2 ./BSW/MCAL/TIMER1/src/TIMER1_program.o
+                0x0080008c        0x2 ./BSW/MCAL/TIMER1/src/TIMER1_program.o
  .bss.TIMER1_pvCallBackFunc_CTC_B
-                0x008000ae        0x2 ./BSW/MCAL/TIMER1/src/TIMER1_program.o
+                0x0080008e        0x2 ./BSW/MCAL/TIMER1/src/TIMER1_program.o
  .bss.TIMER1_pvCallBackFunc_OV
-                0x008000b0        0x2 ./BSW/MCAL/TIMER1/src/TIMER1_program.o
+                0x00800090        0x2 ./BSW/MCAL/TIMER1/src/TIMER1_program.o
  .bss.TIMER1_pvCallBackFunc_CaptEvnt
-                0x008000b2        0x2 ./BSW/MCAL/TIMER1/src/TIMER1_program.o
+                0x00800092        0x2 ./BSW/MCAL/TIMER1/src/TIMER1_program.o
  .bss.Global_PvCompareMatch
-                0x008000b4        0x2 ./BSW/MCAL/TIMER0/src/TIMER0_program.o
+                0x00800094        0x2 ./BSW/MCAL/TIMER0/src/TIMER0_program.o
  .bss.Global_PvOverFlow
-                0x008000b6        0x2 ./BSW/MCAL/TIMER0/src/TIMER0_program.o
+                0x00800096        0x2 ./BSW/MCAL/TIMER0/src/TIMER0_program.o
  .bss.Global_EXTI_pvInt0Func
-                0x008000b8        0x2 ./BSW/MCAL/EXT/src/EXTI_program.o
+                0x00800098        0x2 ./BSW/MCAL/EXT/src/EXTI_program.o
  .bss.Global_EXTI_pvInt1Func
-                0x008000ba        0x2 ./BSW/MCAL/EXT/src/EXTI_program.o
+                0x0080009a        0x2 ./BSW/MCAL/EXT/src/EXTI_program.o
  .bss.Global_EXTI_pvInt2Func
-                0x008000bc        0x2 ./BSW/MCAL/EXT/src/EXTI_program.o
+                0x0080009c        0x2 ./BSW/MCAL/EXT/src/EXTI_program.o
  .bss.Global_PvNotifacation
-                0x008000be        0x2 ./BSW/MCAL/ADC/src/ADC_program.o
+                0x0080009e        0x2 ./BSW/MCAL/ADC/src/ADC_program.o
  .bss.Global_uint16PuReading
-                0x008000c0        0x2 ./BSW/MCAL/ADC/src/ADC_program.o
+                0x008000a0        0x2 ./BSW/MCAL/ADC/src/ADC_program.o
  .bss.timer_counter
-                0x008000c2        0x2 ./App/TrafficLights/src/TrafficLightsControl.o
+                0x008000a2        0x2 ./App/TrafficLights/src/TrafficLightsControl.o
+                0x008000a2                timer_counter
  *(COMMON)
- COMMON         0x008000c4        0x6 ./App/TrafficLights/src/TrafficLightsControl.o
-                0x008000c4                TrafficStack
- COMMON         0x008000ca        0x4 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(malloc.o)
-                0x008000ca                __brkval
-                0x008000cc                __flp
- COMMON         0x008000ce        0x6 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(iob.o)
-                0x008000ce                __iob
-                0x008000d4                PROVIDE (__bss_end, .)
-                0x0000292c                __data_load_start = LOADADDR (.data)
-                0x00002974                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x008000a4        0x8 ./App/TrafficLights/src/TrafficLightsControl.o
+                0x008000a4                Local_Variable
+                0x008000a6                TrafficStack
+ COMMON         0x008000ac        0x4 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(malloc.o)
+                0x008000ac                __brkval
+                0x008000ae                __flp
+ COMMON         0x008000b0        0x6 d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(iob.o)
+                0x008000b0                __iob
+                0x008000b6                PROVIDE (__bss_end, .)
+                0x000028a6                __data_load_start = LOADADDR (.data)
+                0x000028ce                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x008000d4        0x0
-                0x008000d4                PROVIDE (__noinit_start, .)
+.noinit         0x008000b6        0x0
+                0x008000b6                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x008000d4                PROVIDE (__noinit_end, .)
-                0x008000d4                _end = .
-                0x008000d4                PROVIDE (__heap_start, .)
+                0x008000b6                PROVIDE (__noinit_end, .)
+                0x008000b6                _end = .
+                0x008000b6                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -693,35 +700,35 @@ LOAD d:/eclipse/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .signature
  *(.signature*)
 
-.stab           0x00000000     0x4314
+.stab           0x00000000     0x42e4
  *(.stab)
- .stab          0x00000000      0x960 ./Services/Stack/Stack.o
- .stab          0x00000960      0x5b8 ./BSW/MCAL/TIMER2/src/TIMER2_program.o
+ .stab          0x00000000      0x96c ./Services/Stack/Stack.o
+ .stab          0x0000096c      0x5b8 ./BSW/MCAL/TIMER2/src/TIMER2_program.o
                                 0x5c4 (size before relaxing)
- .stab          0x00000f18      0x6fc ./BSW/MCAL/TIMER1/src/TIMER1_program.o
+ .stab          0x00000f24      0x6fc ./BSW/MCAL/TIMER1/src/TIMER1_program.o
                                 0x708 (size before relaxing)
- .stab          0x00001614      0x5ac ./BSW/MCAL/TIMER0/src/TIMER0_program.o
+ .stab          0x00001620      0x5ac ./BSW/MCAL/TIMER0/src/TIMER0_program.o
                                 0x5b8 (size before relaxing)
- .stab          0x00001bc0      0x1f8 ./BSW/MCAL/PORT/src/PORT_program.o
+ .stab          0x00001bcc      0x1f8 ./BSW/MCAL/PORT/src/PORT_program.o
                                 0x204 (size before relaxing)
- .stab          0x00001db8      0x1d4 ./BSW/MCAL/GIE/src/GIE_program.o
+ .stab          0x00001dc4      0x1d4 ./BSW/MCAL/GIE/src/GIE_program.o
                                 0x1e0 (size before relaxing)
- .stab          0x00001f8c      0x768 ./BSW/MCAL/EXT/src/EXTI_program.o
+ .stab          0x00001f98      0x768 ./BSW/MCAL/EXT/src/EXTI_program.o
                                 0x774 (size before relaxing)
- .stab          0x000026f4      0x7c8 ./BSW/MCAL/DIO/src/DIO_Program.o
+ .stab          0x00002700      0x7c8 ./BSW/MCAL/DIO/src/DIO_Program.o
                                 0x7d4 (size before relaxing)
- .stab          0x00002ebc      0x4f8 ./BSW/MCAL/ADC/src/ADC_program.o
+ .stab          0x00002ec8      0x4f8 ./BSW/MCAL/ADC/src/ADC_program.o
                                 0x504 (size before relaxing)
- .stab          0x000033b4      0x708 ./BSW/HAL/CLCD/src/CLCD_program.o
+ .stab          0x000033c0      0x708 ./BSW/HAL/CLCD/src/CLCD_program.o
                                 0x714 (size before relaxing)
- .stab          0x00003abc      0x5f4 ./App/TrafficLights/src/TrafficLightsControl.o
-                                0x600 (size before relaxing)
- .stab          0x000040b0      0x264 ./App/main.o
+ .stab          0x00003ac8      0x5b8 ./App/TrafficLights/src/TrafficLightsControl.o
+                                0x5c4 (size before relaxing)
+ .stab          0x00004080      0x264 ./App/main.o
                                 0x270 (size before relaxing)
 
-.stabstr        0x00000000     0x37fc
+.stabstr        0x00000000     0x3840
  *(.stabstr)
- .stabstr       0x00000000     0x37fc ./Services/Stack/Stack.o
+ .stabstr       0x00000000     0x3840 ./Services/Stack/Stack.o
 
 .stab.excl
  *(.stab.excl)

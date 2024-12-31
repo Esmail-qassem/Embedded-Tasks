@@ -29,7 +29,7 @@ Status Stack_Creation(Stack* My_Stack)
     }
 return Local;
 }
-Status Stack_Push(Stack* My_Stack,StackEnery Variable)
+Status Stack_Push(Stack* My_Stack,StackEntry Variable)
 {
     Status Local=E_NOT_OK;
     StackNode * Local_Pointer=(StackNode*)malloc(sizeof(StackNode));
@@ -50,7 +50,7 @@ Status Stack_Push(Stack* My_Stack,StackEnery Variable)
 return Local;
 
 }
-Status Stack_Pop(Stack* My_Stack,StackEnery* Variable)
+Status Stack_Pop(Stack* My_Stack,StackEntry* Variable)
 {
     StackNode* Local_Pointer= NULL;
     Status Local=E_NOT_OK;
@@ -110,7 +110,7 @@ Status Clear_Stack(Stack* My_Stack)
     }
     return Local;
 }
-Status Stack_Size(Stack* My_Stack,StackEnery* Variable)
+Status Stack_Size(Stack* My_Stack,StackEntry* Variable)
 {
      Status Local = E_NOT_OK;
 

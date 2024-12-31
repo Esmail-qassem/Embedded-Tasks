@@ -3,84 +3,68 @@
 #include "../inc/TrafficLightsControl_private.h"
 #include "../../../Services/Stack/Stack.h"
 
+// Traffic light control stack
 Stack TrafficStack;
-int static timer_counter=0;
-StackEnery Local_Variable=Green;
+int timer_counter = 0;          // Timer counter to track elapsed seconds
+StackEntry Local_Variable;     // Current state function
+int last_handled_time = -1;    // Tracks the last time the state was handled
 
-void test(void) {
-	timer_counter++;
-	if(timer_counter==1)
-		Stack_Pop(&TrafficStack,&Local_Variable);
-
-	switch(Local_Variable)
-	{
-	case Green :
-	{
-		if(timer_counter>=GREEN_DURATION)
-		{
-			HandleyellowState();
-			timer_counter=0;
-		}
-		break;
-
-	}
-	case Yellow:
-	{
-		if(timer_counter>=YELLOW_DURATION)
-		{
-			HandleRedState();
-			timer_counter=0;
-		}
-		break;
-
-	}
-	case Red :
-	{	if(timer_counter>=RED_DURATION)
-			{
-	            Stack_Push(&TrafficStack,Red);
-	            Stack_Push(&TrafficStack,Yellow);
-	            Stack_Push(&TrafficStack,Green);
-				timer_counter=0;
-				HandleGreenState();
-	}
-	break;
-
-	}
-	}
-
-
-
+/* ISR Function */
+void TimerISR(void)
+{
+    timer_counter++; // Increment timer counter every second
 }
 
+/* Traffic Light Initialization */
 void TrafficLightInit(void)
 {
-	PORT_voidInit();
+    /* System initialization */
+    PORT_voidInit();
     CLCD_voidInit();
     GIE_Enable();
     TIMER1_voidInit();
-	TIMER1_voidSetChannelACompMatch(31250);
-	TIMER1_CTCASetCallBck(&test);
-	/*stack initialization*/
+    TIMER1_voidSetChannelACompMatch(31250); // Configure Timer1 for 1-second intervals
+    TIMER1_CTCASetCallBck(&TimerISR);
+
+    /* Stack initialization */
     Stack_Creation(&TrafficStack);
-    Stack_Push(&TrafficStack,Red);
-    Stack_Push(&TrafficStack,Yellow);
-    Stack_Push(&TrafficStack,Green);
-
-    HandleGreenState();
-
+    Stack_Push(&TrafficStack, HandleGreenState); // Start with the green state
 }
 
+/* Traffic Light State Handler */
+void Traffic_Handler(void)
+{
+    if (timer_counter == GREEN_DURATION && last_handled_time != GREEN_DURATION)
+    {
+        Stack_Push(&TrafficStack, HandleyellowState);
+        last_handled_time = GREEN_DURATION; // Mark the transition as handled
+    }
+    else if (timer_counter == GREEN_DURATION + YELLOW_DURATION && last_handled_time != GREEN_DURATION + YELLOW_DURATION)
+    {
+        Stack_Push(&TrafficStack, HandleRedState);
+        last_handled_time = GREEN_DURATION + YELLOW_DURATION; // Mark the transition as handled
+    }
+    else if (timer_counter == GREEN_DURATION + YELLOW_DURATION + RED_DURATION && last_handled_time != GREEN_DURATION + YELLOW_DURATION + RED_DURATION)
+    {
+        Stack_Pop(&TrafficStack, &Local_Variable); // Remove red state
+        Stack_Pop(&TrafficStack, &Local_Variable); // Remove yellow state
+        timer_counter = 0; // Reset timer
+        last_handled_time = -1; // Reset last handled time
+        CLCD_voidSendCommand(1); // Clear display
+    }
+}
+
+/* Main Traffic Light Control Function */
 void TrafficLightMainFunction(void)
 {
-	CLCD_voidGoToXY(0,0);
-	CLCD_voidSendString("Traffic light");
-	CLCD_voidGoToXY(1,0);
-	CLCD_voidSendString("Timer: ");
-	CLCD_voidWriteNumber(timer_counter);
-    if (TrafficStack.top != NULL) {
-        CLCD_voidGoToXY(1, 8);
-        CLCD_voidSendString(" Size: ");
-        CLCD_voidWriteNumber(TrafficStack.Size);
-    }
+    Local_Variable = TrafficStack.top->entry; // Get the current state function
+    Local_Variable(); // Execute the state function
 
+    Traffic_Handler(); // Handle state transitions
+
+    /* Display timer and stack size */
+    CLCD_voidGoToXY(0, 0);
+    CLCD_voidWriteNumber(timer_counter);
+    CLCD_voidGoToXY(1, 0);
+    CLCD_voidWriteNumber(TrafficStack.Size);
 }
