@@ -1,0 +1,26 @@
+#include "TrafficLights/inc/TrafficLightsControl_interface.h"
+#include  "Fixed_Point/inc/FixedPoint_interface.h"
+
+
+int main()
+{
+	TrafficLightInit();
+	fixed32_t Test;
+
+	while(1)
+	{
+
+		Test Fixed_ToInt(85156);
+
+		//fixed32_t Fixed_FromFloat(float value);
+
+		//float Fixed_ToFloat(fixed32_t fixed);
+
+		CLCD_voidGoToXY(0,0);
+		CLCD_voidWriteNumber(Test);
+
+		//TrafficLightMainFunction();
+	}
+}
+
+

@@ -96,3 +96,2352 @@ Data:         86 bytes (4.2% Full)
 
 Finished building: sizedummy
  
+02:08:49 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10446 bytes (31.9% Full)
+(.text + .data + .bootloader)
+
+Data:         86 bytes (4.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:58:18 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10446 bytes (31.9% Full)
+(.text + .data + .bootloader)
+
+Data:         86 bytes (4.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:08:07 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_FromFloat':
+../App/Fixed_Point/src/Fixed_Point.c:7: warning: control reaches end of non-void function
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_Add':
+../App/Fixed_Point/src/Fixed_Point.c:12: warning: control reaches end of non-void function
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_Sub':
+../App/Fixed_Point/src/Fixed_Point.c:17: warning: control reaches end of non-void function
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_Mul':
+../App/Fixed_Point/src/Fixed_Point.c:22: warning: control reaches end of non-void function
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_FromInt':
+../App/Fixed_Point/src/Fixed_Point.c:28: error: expected ')' before 'integer'
+../App/Fixed_Point/src/Fixed_Point.c:29: warning: control reaches end of non-void function
+make: *** [App/Fixed_Point/src/Fixed_Point.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:09:26 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_FromFloat':
+../App/Fixed_Point/src/Fixed_Point.c:7: warning: control reaches end of non-void function
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_Add':
+../App/Fixed_Point/src/Fixed_Point.c:12: warning: control reaches end of non-void function
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_Sub':
+../App/Fixed_Point/src/Fixed_Point.c:17: warning: control reaches end of non-void function
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_Mul':
+../App/Fixed_Point/src/Fixed_Point.c:22: warning: control reaches end of non-void function
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10700 bytes (32.7% Full)
+(.text + .data + .bootloader)
+
+Data:         86 bytes (4.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:09:40 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_FromFloat':
+../App/Fixed_Point/src/Fixed_Point.c:7: warning: control reaches end of non-void function
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_Add':
+../App/Fixed_Point/src/Fixed_Point.c:12: warning: control reaches end of non-void function
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_Sub':
+../App/Fixed_Point/src/Fixed_Point.c:17: warning: control reaches end of non-void function
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_Mul':
+../App/Fixed_Point/src/Fixed_Point.c:22: warning: control reaches end of non-void function
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_FromInt':
+../App/Fixed_Point/src/Fixed_Point.c:28: error: expected ')' before 'integer'
+../App/Fixed_Point/src/Fixed_Point.c:29: warning: control reaches end of non-void function
+make: *** [App/Fixed_Point/src/Fixed_Point.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:11:56 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_FromFloat':
+../App/Fixed_Point/src/Fixed_Point.c:7: warning: control reaches end of non-void function
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_Add':
+../App/Fixed_Point/src/Fixed_Point.c:12: warning: control reaches end of non-void function
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_Sub':
+../App/Fixed_Point/src/Fixed_Point.c:17: warning: control reaches end of non-void function
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_Mul':
+../App/Fixed_Point/src/Fixed_Point.c:22: warning: control reaches end of non-void function
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_FromInt':
+../App/Fixed_Point/src/Fixed_Point.c:28: error: expected ')' before 'integer'
+../App/Fixed_Point/src/Fixed_Point.c:30: warning: control reaches end of non-void function
+make: *** [App/Fixed_Point/src/Fixed_Point.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:12:04 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_FromFloat':
+../App/Fixed_Point/src/Fixed_Point.c:7: warning: control reaches end of non-void function
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_Add':
+../App/Fixed_Point/src/Fixed_Point.c:12: warning: control reaches end of non-void function
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_Sub':
+../App/Fixed_Point/src/Fixed_Point.c:17: warning: control reaches end of non-void function
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_Mul':
+../App/Fixed_Point/src/Fixed_Point.c:22: warning: control reaches end of non-void function
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_FromInt':
+../App/Fixed_Point/src/Fixed_Point.c:28: error: expected ')' before 'integer'
+../App/Fixed_Point/src/Fixed_Point.c:30: warning: control reaches end of non-void function
+make: *** [App/Fixed_Point/src/Fixed_Point.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:13:56 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_FromFloat':
+../App/Fixed_Point/src/Fixed_Point.c:7: warning: control reaches end of non-void function
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_Add':
+../App/Fixed_Point/src/Fixed_Point.c:12: warning: control reaches end of non-void function
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_Sub':
+../App/Fixed_Point/src/Fixed_Point.c:17: warning: control reaches end of non-void function
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_Mul':
+../App/Fixed_Point/src/Fixed_Point.c:22: warning: control reaches end of non-void function
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_FromInt':
+../App/Fixed_Point/src/Fixed_Point.c:28: error: expected ')' before 'integer'
+../App/Fixed_Point/src/Fixed_Point.c:30: warning: control reaches end of non-void function
+make: *** [App/Fixed_Point/src/Fixed_Point.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:14:22 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_FromInt':
+../App/Fixed_Point/src/Fixed_Point.c:14: error: expected ')' before 'integer'
+../App/Fixed_Point/src/Fixed_Point.c:16: warning: control reaches end of non-void function
+make: *** [App/Fixed_Point/src/Fixed_Point.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:15:03 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_FromInt':
+../App/Fixed_Point/src/Fixed_Point.c:14: error: expected ')' before 'integer'
+../App/Fixed_Point/src/Fixed_Point.c:16: warning: control reaches end of non-void function
+make: *** [App/Fixed_Point/src/Fixed_Point.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:15:36 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_FromInt':
+../App/Fixed_Point/src/Fixed_Point.c:14: error: expected ')' before 'integer'
+../App/Fixed_Point/src/Fixed_Point.c:16: warning: control reaches end of non-void function
+make: *** [App/Fixed_Point/src/Fixed_Point.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:15:52 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_FromInt':
+../App/Fixed_Point/src/Fixed_Point.c:14: error: expected ')' before 'integer'
+../App/Fixed_Point/src/Fixed_Point.c:16: warning: control reaches end of non-void function
+make: *** [App/Fixed_Point/src/Fixed_Point.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:16:17 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_FromInt':
+../App/Fixed_Point/src/Fixed_Point.c:14: error: expected ')' before 'integer'
+../App/Fixed_Point/src/Fixed_Point.c:16: warning: control reaches end of non-void function
+make: *** [App/Fixed_Point/src/Fixed_Point.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:17:19 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10498 bytes (32.0% Full)
+(.text + .data + .bootloader)
+
+Data:         86 bytes (4.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:17:54 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10498 bytes (32.0% Full)
+(.text + .data + .bootloader)
+
+Data:         86 bytes (4.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:18:38 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10498 bytes (32.0% Full)
+(.text + .data + .bootloader)
+
+Data:         86 bytes (4.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:23:30 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/main.d" -MT"App/main.o" -c -o "App/main.o" "../App/main.c"
+Finished building: ../App/main.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10490 bytes (32.0% Full)
+(.text + .data + .bootloader)
+
+Data:         86 bytes (4.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:25:30 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/main.d" -MT"App/main.o" -c -o "App/main.o" "../App/main.c"
+Finished building: ../App/main.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10546 bytes (32.2% Full)
+(.text + .data + .bootloader)
+
+Data:         86 bytes (4.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:59:48 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_FromFloat':
+../App/Fixed_Point/src/Fixed_Point.c:5: warning: left-hand operand of comma expression has no effect
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building file: ../App/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/main.d" -MT"App/main.o" -c -o "App/main.o" "../App/main.c"
+Finished building: ../App/main.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10592 bytes (32.3% Full)
+(.text + .data + .bootloader)
+
+Data:         86 bytes (4.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:00:34 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/main.d" -MT"App/main.o" -c -o "App/main.o" "../App/main.c"
+Finished building: ../App/main.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10592 bytes (32.3% Full)
+(.text + .data + .bootloader)
+
+Data:         86 bytes (4.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:01:18 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building file: ../App/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/main.d" -MT"App/main.o" -c -o "App/main.o" "../App/main.c"
+Finished building: ../App/main.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13176 bytes (40.2% Full)
+(.text + .data + .bootloader)
+
+Data:         94 bytes (4.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:02:05 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13176 bytes (40.2% Full)
+(.text + .data + .bootloader)
+
+Data:         94 bytes (4.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:59:31 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_ToFloat':
+../App/Fixed_Point/src/Fixed_Point.c:23: warning: control reaches end of non-void function
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building file: ../App/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/main.d" -MT"App/main.o" -c -o "App/main.o" "../App/main.c"
+../App/main.c: In function 'Fixed_FromInt':
+../App/main.c:15: error: expected declaration specifiers before 'CLCD_voidGoToXY'
+../App/main.c:16: error: expected declaration specifiers before 'CLCD_voidWriteNumber'
+../App/main.c:19: error: expected declaration specifiers before '}' token
+../App/main.c:20: error: expected declaration specifiers before '}' token
+../App/main.c:20: error: expected '{' at end of input
+../App/main.c: In function 'main':
+../App/main.c:20: error: expected declaration or statement at end of input
+../App/main.c:20: error: expected declaration or statement at end of input
+make: *** [App/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+21:59:53 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_ToFloat':
+../App/Fixed_Point/src/Fixed_Point.c:23: warning: control reaches end of non-void function
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building file: ../App/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/main.d" -MT"App/main.o" -c -o "App/main.o" "../App/main.c"
+../App/main.c: In function 'Fixed_FromInt':
+../App/main.c:15: error: expected declaration specifiers before 'CLCD_voidGoToXY'
+../App/main.c:16: error: expected declaration specifiers before 'CLCD_voidWriteNumber'
+../App/main.c:19: error: expected declaration specifiers before '}' token
+../App/main.c:20: error: expected declaration specifiers before '}' token
+../App/main.c:20: error: expected '{' at end of input
+../App/main.c: In function 'main':
+../App/main.c:20: error: expected declaration or statement at end of input
+../App/main.c:20: error: expected declaration or statement at end of input
+make: *** [App/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+22:00:13 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/main.d" -MT"App/main.o" -c -o "App/main.o" "../App/main.c"
+Finished building: ../App/main.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14410 bytes (44.0% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:01:34 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/main.d" -MT"App/main.o" -c -o "App/main.o" "../App/main.c"
+../App/main.c: In function 'main':
+../App/main.c:13: warning: statement with no effect
+../App/main.c:13: error: expected ';' before 'Fixed_ToInt'
+make: *** [App/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+22:01:41 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/main.d" -MT"App/main.o" -c -o "App/main.o" "../App/main.c"
+Finished building: ../App/main.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14410 bytes (44.0% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:02:16 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/main.d" -MT"App/main.o" -c -o "App/main.o" "../App/main.c"
+Finished building: ../App/main.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14410 bytes (44.0% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:04:19 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/main.d" -MT"App/main.o" -c -o "App/main.o" "../App/main.c"
+Finished building: ../App/main.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14418 bytes (44.0% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:05:16 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_ToFloat':
+../App/Fixed_Point/src/Fixed_Point.c:23: error: 'retuen' undeclared (first use in this function)
+../App/Fixed_Point/src/Fixed_Point.c:23: error: (Each undeclared identifier is reported only once
+../App/Fixed_Point/src/Fixed_Point.c:23: error: for each function it appears in.)
+../App/Fixed_Point/src/Fixed_Point.c:23: error: expected ';' before 'Ret_Value'
+../App/Fixed_Point/src/Fixed_Point.c:24: warning: control reaches end of non-void function
+make: *** [App/Fixed_Point/src/Fixed_Point.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+22:05:27 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14430 bytes (44.0% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:05:57 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/main.d" -MT"App/main.o" -c -o "App/main.o" "../App/main.c"
+Finished building: ../App/main.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14430 bytes (44.0% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:06:52 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14066 bytes (42.9% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:07:27 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14058 bytes (42.9% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:08:51 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building file: ../App/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/main.d" -MT"App/main.o" -c -o "App/main.o" "../App/main.c"
+Finished building: ../App/main.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14066 bytes (42.9% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:09:26 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14080 bytes (43.0% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:09:42 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14074 bytes (43.0% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:17:16 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14074 bytes (43.0% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:17:44 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14080 bytes (43.0% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:19:39 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14066 bytes (42.9% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:20:07 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14080 bytes (43.0% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:20:33 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14080 bytes (43.0% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:20:53 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14080 bytes (43.0% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:21:08 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14102 bytes (43.0% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:21:20 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14096 bytes (43.0% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:21:44 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14122 bytes (43.1% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:22:02 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14102 bytes (43.0% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:22:15 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14122 bytes (43.1% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:24:02 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+../App/Fixed_Point/src/Fixed_Point.c:21:20: error: invalid suffix "ffff" on integer constant
+make: *** [App/Fixed_Point/src/Fixed_Point.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+22:24:21 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14112 bytes (43.1% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:24:48 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14168 bytes (43.2% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:25:00 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14176 bytes (43.3% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:26:39 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14168 bytes (43.2% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:26:53 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14168 bytes (43.2% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:27:06 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14168 bytes (43.2% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:27:49 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14202 bytes (43.3% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:28:05 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14202 bytes (43.3% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:28:16 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14216 bytes (43.4% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:28:55 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14566 bytes (44.5% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:29:09 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14576 bytes (44.5% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:29:23 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14164 bytes (43.2% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:29:41 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14164 bytes (43.2% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:29:53 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14164 bytes (43.2% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:30:36 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14576 bytes (44.5% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:30:47 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/main.d" -MT"App/main.o" -c -o "App/main.o" "../App/main.c"
+Finished building: ../App/main.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14564 bytes (44.4% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:31:12 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../BSW/HAL/CLCD/src/CLCD_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"BSW/HAL/CLCD/src/CLCD_program.d" -MT"BSW/HAL/CLCD/src/CLCD_program.o" -c -o "BSW/HAL/CLCD/src/CLCD_program.o" "../BSW/HAL/CLCD/src/CLCD_program.c"
+../BSW/HAL/CLCD/src/CLCD_program.c:108: error: conflicting types for 'CLCD_voidWriteNumber'
+../BSW/HAL/CLCD/src/../inc/CLCD_interface.h:34: error: previous declaration of 'CLCD_voidWriteNumber' was here
+../BSW/HAL/CLCD/src/CLCD_program.c: In function 'CLCD_voidWriteNumber':
+../BSW/HAL/CLCD/src/CLCD_program.c:124: error: invalid operands to binary % (have 'float' and 'int')
+make: *** [BSW/HAL/CLCD/src/CLCD_program.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+22:31:20 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../BSW/HAL/CLCD/src/CLCD_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"BSW/HAL/CLCD/src/CLCD_program.d" -MT"BSW/HAL/CLCD/src/CLCD_program.o" -c -o "BSW/HAL/CLCD/src/CLCD_program.o" "../BSW/HAL/CLCD/src/CLCD_program.c"
+../BSW/HAL/CLCD/src/CLCD_program.c: In function 'CLCD_voidWriteNumber':
+../BSW/HAL/CLCD/src/CLCD_program.c:124: error: invalid operands to binary % (have 'float' and 'int')
+make: *** [BSW/HAL/CLCD/src/CLCD_program.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+22:31:59 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../BSW/HAL/CLCD/src/CLCD_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"BSW/HAL/CLCD/src/CLCD_program.d" -MT"BSW/HAL/CLCD/src/CLCD_program.o" -c -o "BSW/HAL/CLCD/src/CLCD_program.o" "../BSW/HAL/CLCD/src/CLCD_program.c"
+../BSW/HAL/CLCD/src/CLCD_program.c: In function 'CLCD_voidWriteNumber':
+../BSW/HAL/CLCD/src/CLCD_program.c:124: error: invalid operands to binary % (have 'float' and 'int')
+make: *** [BSW/HAL/CLCD/src/CLCD_program.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+22:32:41 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../BSW/HAL/CLCD/src/CLCD_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"BSW/HAL/CLCD/src/CLCD_program.d" -MT"BSW/HAL/CLCD/src/CLCD_program.o" -c -o "BSW/HAL/CLCD/src/CLCD_program.o" "../BSW/HAL/CLCD/src/CLCD_program.c"
+Finished building: ../BSW/HAL/CLCD/src/CLCD_program.c
+ 
+Building file: ../App/TrafficLights/src/TrafficLightsControl.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/TrafficLights/src/TrafficLightsControl.d" -MT"App/TrafficLights/src/TrafficLightsControl.o" -c -o "App/TrafficLights/src/TrafficLightsControl.o" "../App/TrafficLights/src/TrafficLightsControl.c"
+Finished building: ../App/TrafficLights/src/TrafficLightsControl.c
+ 
+Building file: ../App/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/main.d" -MT"App/main.o" -c -o "App/main.o" "../App/main.c"
+Finished building: ../App/main.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14576 bytes (44.5% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:52:08 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex AT32.elf  "AT32.eep"
+Finished building: AT32.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14576 bytes (44.5% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+D:\Eclipse\eclipse\WinAVR\bin\avrdude -pm32 -Uflash:w:AT32.hex:a
+
+avrdude: no programmer has been specified on the command line or the config file
+         Specify a programmer using the -c option and try again
+
+make: *** [avrdudedummy] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+22:52:28 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex AT32.elf  "AT32.eep"
+Finished building: AT32.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14576 bytes (44.5% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:58:41 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+../App/Fixed_Point/src/Fixed_Point.c: In function 'Fixed_ToFloat':
+../App/Fixed_Point/src/Fixed_Point.c:23: error: expected ';' before ')' token
+../App/Fixed_Point/src/Fixed_Point.c:23: error: expected statement before ')' token
+make: *** [App/Fixed_Point/src/Fixed_Point.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+22:58:56 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex AT32.elf  "AT32.eep"
+Finished building: AT32.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14604 bytes (44.6% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:00:48 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex AT32.elf  "AT32.eep"
+Finished building: AT32.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14592 bytes (44.5% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:01:02 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex AT32.elf  "AT32.eep"
+Finished building: AT32.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14592 bytes (44.5% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:01:11 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex AT32.elf  "AT32.eep"
+Finished building: AT32.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14592 bytes (44.5% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:01:20 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex AT32.elf  "AT32.eep"
+Finished building: AT32.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14592 bytes (44.5% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:01:47 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Building file: ../App/Fixed_Point/src/Fixed_Point.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Fixed_Point/src/Fixed_Point.d" -MT"App/Fixed_Point/src/Fixed_Point.o" -c -o "App/Fixed_Point/src/Fixed_Point.o" "../App/Fixed_Point/src/Fixed_Point.c"
+Finished building: ../App/Fixed_Point/src/Fixed_Point.c
+ 
+Building target: AT32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AT32.map -mmcu=atmega32 -o "AT32.elf"  ./Services/Stack/Stack.o  ./BSW/MCAL/TIMER2/src/TIMER2_program.o  ./BSW/MCAL/TIMER1/src/TIMER1_program.o  ./BSW/MCAL/TIMER0/src/TIMER0_program.o  ./BSW/MCAL/PORT/src/PORT_program.o  ./BSW/MCAL/GIE/src/GIE_program.o  ./BSW/MCAL/EXT/src/EXTI_program.o  ./BSW/MCAL/DIO/src/DIO_Program.o  ./BSW/MCAL/ADC/src/ADC_program.o  ./BSW/HAL/CLCD/src/CLCD_program.o  ./App/TrafficLights/src/TrafficLightsControl.o  ./App/Fixed_Point/src/Fixed_Point.o  ./App/main.o   
+Finished building target: AT32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AT32.elf  >"AT32.lss"
+Finished building: AT32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AT32.elf  "AT32.hex"
+Finished building: AT32.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex AT32.elf  "AT32.eep"
+Finished building: AT32.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14576 bytes (44.5% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:02:06 **** Incremental Build of configuration Debug for project AT32 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AT32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14576 bytes (44.5% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

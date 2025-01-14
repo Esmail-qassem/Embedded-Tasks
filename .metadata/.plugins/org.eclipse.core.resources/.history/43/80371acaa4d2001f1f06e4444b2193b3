@@ -1,0 +1,18 @@
+#include "TrafficLights/inc/TrafficLightsControl_interface.h"
+#include  "Fixed_Point/inc/FixedPoint_interface.h"
+
+
+int main()
+{
+	//TrafficLightInit();
+
+
+	while(1)
+	{
+		fixed32_t Fixed_FromInt(10);
+
+		//TrafficLightMainFunction();
+	}
+}
+
+

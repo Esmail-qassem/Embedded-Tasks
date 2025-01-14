@@ -1,0 +1,9 @@
+#include "../inc/FixedPoint_private.h"
+#include "../inc/FixedPoint_config.h"
+
+#ifndef APP_FIXED_POINT_INC_FIXEDPOINT_INTERFACE_H_
+#define APP_FIXED_POINT_INC_FIXEDPOINT_INTERFACE_H_
+
+
+
+#endif /* APP_FIXED_POINT_INC_FIXEDPOINT_INTERFACE_H_ */

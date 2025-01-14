@@ -1,0 +1,16 @@
+#include "../inc/FixedPoint_interface.h"
+
+fixed32_t Fixed_FromFloat(float value)
+{
+	return FLOAT_TO_FIXP(value);
+}
+fixed32_t Fixed_FromInt(uint32 integer)
+{
+	 return INT_TO_FIXP(integer);
+
+}
+
+uint32 Fixed_ToInt(fixed32_t fixed);
+
+
+

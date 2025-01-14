@@ -1,0 +1,21 @@
+#include "../inc/FixedPoint_interface.h"
+
+fixed32_t Fixed_FromFloat(float value);
+fixed32_t Fixed_Add(fixed32_t a, fixed32_t b);
+
+fixed32_t Fixed_Sub(fixed32_t a, fixed32_t b);
+
+fixed32_t Fixed_Mul(fixed32_t a, fixed32_t b);
+
+fixed32_t Fixed_Div(fixed32_t a, fixed32_t b);
+
+fixed32_t Fixed_FromInt(uint32 integer)
+{
+	 return FP_SHIFT(integer);
+
+}
+
+uint32 Fixed_ToInt(fixed32_t fixed);
+
+
+
