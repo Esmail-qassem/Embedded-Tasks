@@ -105,31 +105,74 @@ void CLCD_voidGoToXY(uint8 Copy_uint8Xposition,uint8 Copy_uint8Yposition)
 }
 
 
-void CLCD_voidWriteNumber(sint32 copy_uint32Number)
+void CLCD_voidWriteNumber(float copy_f32Number)
 {
-	if(copy_uint32Number<0)
-	{
-		CLCD_voidSendData('-');
-		copy_uint32Number= -copy_uint32Number;
-	}
-	if(copy_uint32Number==0)
-	{
-		CLCD_voidSendData('0');
-		return;
-	}
-uint8 NUM[10];
-uint8 Local_uint8Counter=0;
-while(copy_uint32Number>0)
-{
-	NUM[Local_uint8Counter++]=(copy_uint32Number%10)+'0';
-	copy_uint32Number/=10;
+    // Handle negative numbers
+    if (copy_f32Number < 0)
+    {
+        CLCD_voidSendData('-');
+        copy_f32Number = -copy_f32Number;
+    }
+
+    // Separate the integer and fractional parts
+    sint32 integerPart = (sint32)copy_f32Number; // Extract the integer part
+    float fractionalPart = copy_f32Number - integerPart; // Extract the fractional part
+
+    // Handle the integer part (reusing existing logic)
+    if (integerPart == 0)
+    {
+        CLCD_voidSendData('0');
+    }
+    else
+    {
+        uint8 NUM[10];
+        uint8 Local_uint8Counter = 0;
+
+        while (integerPart > 0)
+        {
+            NUM[Local_uint8Counter++] = (integerPart % 10) + '0';
+            integerPart /= 10;
+        }
+
+        // Reverse and display the integer part
+        for (uint8 i = Local_uint8Counter; i > 0; i--)
+        {
+            CLCD_voidSendData(NUM[i - 1]);
+        }
+    }
+
+    // Handle the fractional part
+    CLCD_voidSendData('.'); // Display the decimal point
+
+    fractionalPart *= 1000; // Scale to display three decimal places
+    sint32 fractionalPartAsInt = (sint32)(fractionalPart + 0.5); // Round the fractional part
+
+    if (fractionalPartAsInt == 0)
+    {
+        // Display trailing zeros if the fractional part is zero
+        CLCD_voidSendData('0');
+        CLCD_voidSendData('0');
+        CLCD_voidSendData('0');
+    }
+    else
+    {
+        uint8 FRACT[10];
+        uint8 Local_uint8FracCounter = 0;
+
+        while (fractionalPartAsInt > 0)
+        {
+            FRACT[Local_uint8FracCounter++] = (fractionalPartAsInt % 10) + '0';
+            fractionalPartAsInt /= 10;
+        }
+
+        // Reverse and display the fractional part
+        for (uint8 i = Local_uint8FracCounter; i > 0; i--)
+        {
+            CLCD_voidSendData(FRACT[i - 1]);
+        }
+    }
 }
-/*reverse*/
-for(uint8 i=Local_uint8Counter;i>0;i--)
-{
-	CLCD_voidSendData(NUM[i-1]);
-}
-}
+
 void CLCD_voidWriteSpecialChar(uint8* copy_puint8Pattern,uint8 copy_uint8PatternNumber,uint8 copy_uint8Xposition,uint8 copy_uint8Yposition)
 {
 	uint8 Local_uint8CGRAM_Address=0;

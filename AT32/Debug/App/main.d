@@ -9,9 +9,7 @@ App/main.o App/main.o: ../App/main.c \
   ../App/TrafficLights/inc/../../../BSW/MCAL/TIMER1/inc/TIMER1_interface.h \
   ../App/Fixed_Point/inc/FixedPoint_interface.h \
   ../App/Fixed_Point/inc/../../../BSW/LIB/STD_TYPES.h \
-  ../App/Fixed_Point/inc/../../../BSW/LIB/BIT_MATH.h \
-  ../App/Fixed_Point/inc/../inc/FixedPoint_private.h \
-  ../App/Fixed_Point/inc/../inc/FixedPoint_config.h
+  ../App/Fixed_Point/inc/../../../BSW/LIB/BIT_MATH.h
 
 ../App/TrafficLights/inc/TrafficLightsControl_interface.h:
 
@@ -34,7 +32,3 @@ App/main.o App/main.o: ../App/main.c \
 ../App/Fixed_Point/inc/../../../BSW/LIB/STD_TYPES.h:
 
 ../App/Fixed_Point/inc/../../../BSW/LIB/BIT_MATH.h:
-
-../App/Fixed_Point/inc/../inc/FixedPoint_private.h:
-
-../App/Fixed_Point/inc/../inc/FixedPoint_config.h:

@@ -1,5 +1,0 @@
-#include "../inc/FixedPoint_interface.h"
-#include "../inc/FixedPoint_private.h"
-#include "../inc/FixedPoint_config.h"
-
-

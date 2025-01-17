@@ -2,26 +2,23 @@
 #define APP_FIXED_POINT_INC_FIXEDPOINT_INTERFACE_H_
 #include "../../../BSW/LIB/STD_TYPES.h"
 #include "../../../BSW/LIB/BIT_MATH.h"
-#include "../inc/FixedPoint_private.h"
-#include "../inc/FixedPoint_config.h"
+
+typedef uint16 fixed16_t; // 32-bit fixed-point representation
+
+#define FixedPoint_SHIFT    8
+#define FixedPoint_SCALE    256u
+#define FP_SHIFT(n)  ((n)<<FixedPoint_SHIFT)  // Scale factor (e.g., Q8.8 format)
+#define INT_TO_FIXP(n) ((fixed16_t)(FP_SHIFT(n)))
+#define FLOAT_TO_FIXP(n) ((fixed16_t)((float)((n)*FixedPoint_SCALE + 0.5f)))
 
 
+fixed16_t Fixed_Add(float a, float b);
 
-fixed32_t Fixed_Add(fixed32_t a, fixed32_t b);
+fixed16_t Fixed_Sub(float a, float b);
 
-fixed32_t Fixed_Sub(fixed32_t a, fixed32_t b);
+fixed16_t Fixed_Mul(float a, float b);
 
-fixed32_t Fixed_Mul(fixed32_t a, fixed32_t b);
-
-fixed32_t Fixed_Div(fixed32_t a, fixed32_t b);
-
-fixed32_t Fixed_FromInt(uint32 integer);
-
-uint32 Fixed_ToInt(fixed32_t fixed);
-
-fixed32_t Fixed_FromFloat(float value);
-
-float Fixed_ToFloat(fixed32_t fixed);
+fixed16_t Fixed_Div(float a, float b);
 
 
 #endif /* APP_FIXED_POINT_INC_FIXEDPOINT_INTERFACE_H_ */
