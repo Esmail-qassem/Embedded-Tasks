@@ -25,6 +25,7 @@ App/Fixed_Point/src \
 App/TrafficLights/src \
 App \
 BSW/HAL/CLCD/src \
+BSW/HAL/EEPROM/src \
 BSW/MCAL/ADC/src \
 BSW/MCAL/DIO/src \
 BSW/MCAL/EXT/src \
@@ -33,5 +34,6 @@ BSW/MCAL/PORT/src \
 BSW/MCAL/TIMER0/src \
 BSW/MCAL/TIMER1/src \
 BSW/MCAL/TIMER2/src \
+BSW/MCAL/TWI/src \
 Services/Stack \
 

@@ -9,6 +9,7 @@ RM := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include Services/Stack/subdir.mk
+-include BSW/MCAL/TWI/src/subdir.mk
 -include BSW/MCAL/TIMER2/src/subdir.mk
 -include BSW/MCAL/TIMER1/src/subdir.mk
 -include BSW/MCAL/TIMER0/src/subdir.mk
@@ -17,6 +18,7 @@ RM := rm -rf
 -include BSW/MCAL/EXT/src/subdir.mk
 -include BSW/MCAL/DIO/src/subdir.mk
 -include BSW/MCAL/ADC/src/subdir.mk
+-include BSW/HAL/EEPROM/src/subdir.mk
 -include BSW/HAL/CLCD/src/subdir.mk
 -include App/TrafficLights/src/subdir.mk
 -include App/Fixed_Point/src/subdir.mk

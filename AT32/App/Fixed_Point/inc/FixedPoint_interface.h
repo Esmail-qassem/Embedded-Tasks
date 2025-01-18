@@ -9,8 +9,8 @@ typedef uint16 fixed16_t; // 32-bit fixed-point representation
 #define FixedPoint_SCALE    256u
 #define FP_SHIFT(n)  ((n)<<FixedPoint_SHIFT)  // Scale factor (e.g., Q8.8 format)
 #define INT_TO_FIXP(n) ((fixed16_t)(FP_SHIFT(n)))
-#define FLOAT_TO_FIXP(n) ((fixed16_t)((float)((n)*FixedPoint_SCALE + 0.5f)))
-
+#define FLOAT_TO_FIXP(n) ((fixed16_t)((((n)*FixedPoint_SCALE) + 0.5f)))
+#define MULT_FIXED(n1,n2)  (fixed16_t)(((uint32)(n1)*(uint32)(n2))>>FixedPoint_SHIFT)
 
 fixed16_t Fixed_Add(float a, float b);
 

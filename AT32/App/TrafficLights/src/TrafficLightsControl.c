@@ -1,6 +1,6 @@
-#include "../inc/TrafficLightsControl_interface.h"
-#include "../inc/TrafficLightsControl_config.h"
-#include "../inc/TrafficLightsControl_private.h"
+#include "TrafficLights/inc/TrafficLightsControl_interface.h"
+#include "TrafficLights/inc/TrafficLightsControl_config.h"
+#include "TrafficLights/inc/TrafficLightsControl_private.h"
 #include "../../../Services/Stack/Stack.h"
 
 // Traffic light control stack

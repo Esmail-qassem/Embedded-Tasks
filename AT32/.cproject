@@ -30,6 +30,12 @@
 							<tool id="de.innot.avreclipse.tool.compiler.winavr.app.debug.1973137937" name="AVR Compiler" superClass="de.innot.avreclipse.tool.compiler.winavr.app.debug">
 								<option id="de.innot.avreclipse.compiler.option.debug.level.1211462831" name="Generate Debugging Info" superClass="de.innot.avreclipse.compiler.option.debug.level"/>
 								<option id="de.innot.avreclipse.compiler.option.optimize.791982921" name="Optimization Level" superClass="de.innot.avreclipse.compiler.option.optimize"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="de.innot.avreclipse.compiler.option.incpath.169636081" name="Include Paths (-I)" superClass="de.innot.avreclipse.compiler.option.incpath" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;D:\Embedded-Tasks\AT32\BSW\MCAL&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Embedded-Tasks\AT32\BSW\HAL&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Embedded-Tasks\AT32\App&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Embedded-Tasks\AT32\BSW\LIB&quot;"/>
+								</option>
 								<inputType id="de.innot.avreclipse.compiler.winavr.input.603628009" name="C Source Files" superClass="de.innot.avreclipse.compiler.winavr.input"/>
 							</tool>
 							<tool id="de.innot.avreclipse.tool.cppcompiler.app.debug.1643656355" name="AVR C++ Compiler" superClass="de.innot.avreclipse.tool.cppcompiler.app.debug">
@@ -119,13 +125,24 @@
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
 		<project id="AT32.de.innot.avreclipse.project.winavr.elf_2.1.0.993143303" name="AVR Cross Target Application" projectType="de.innot.avreclipse.project.winavr.elf_2.1.0"/>
 	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Debug">
+			<resource resourceType="PROJECT" workspacePath="/AT32"/>
+		</configuration>
+		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/AT32"/>
+		</configuration>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
 	<storageModule moduleId="scannerConfiguration">
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="de.innot.avreclipse.configuration.app.debug.1689053500;de.innot.avreclipse.configuration.app.debug.1689053500.;de.innot.avreclipse.tool.compiler.winavr.app.debug.1973137937;de.innot.avreclipse.compiler.winavr.input.603628009">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="de.innot.avreclipse.core.AVRGCCManagedMakePerProjectProfileC"/>
+		</scannerConfigBuildInfo>
 		<scannerConfigBuildInfo instanceId="de.innot.avreclipse.configuration.app.release.369508907;de.innot.avreclipse.configuration.app.release.369508907.;de.innot.avreclipse.tool.compiler.winavr.app.release.1921917397;de.innot.avreclipse.compiler.winavr.input.1435631362">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="de.innot.avreclipse.core.AVRGCCManagedMakePerProjectProfileC"/>
 		</scannerConfigBuildInfo>
 	</storageModule>
-	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
-	<storageModule moduleId="refreshScope"/>
-	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
 </cproject>

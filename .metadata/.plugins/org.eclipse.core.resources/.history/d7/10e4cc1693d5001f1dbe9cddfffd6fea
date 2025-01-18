@@ -1,0 +1,25 @@
+#include "TrafficLights/inc/TrafficLightsControl_interface.h"
+#include  "Fixed_Point/inc/FixedPoint_interface.h"
+#include  "EEPROM/inc/EEPROM_interface.h"
+float test(float a ,float b)
+{
+	float result = a*b;
+	return result;
+}
+int main()
+{
+	TrafficLightInit();
+	TWI_voidMasterInit()L
+
+
+
+	while(1)
+	{
+
+
+
+		//TrafficLightMainFunction();
+	}
+}
+
+
