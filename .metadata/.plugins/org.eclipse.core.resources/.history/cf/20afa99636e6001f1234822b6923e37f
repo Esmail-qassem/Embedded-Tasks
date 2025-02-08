@@ -1,0 +1,23 @@
+#include "PORT/inc/PORT_interface.h"
+#include "LCD_OLED/inc/OLED.h"
+#include "DIO/inc/DIO_interface.h"
+
+int main(void)
+{
+
+    PORT_voidInit();
+    SSD1306_Init(); // Initialize the OLED display
+    SSD1306_ClearDisplay(); // Clear the screen
+    // Display the number 12345 on page 0, column 0
+
+	  SSD1306_DisplayNumber(*(volatile*(0x1f)), 5, 5);
+	   SSD1306_DisplayString("ESMAIL A7A QASSEM!!", 0, 0);
+
+      while (1)
+      {
+          // Your main loop code here
+      }
+return 0;
+}
+
+

@@ -1,0 +1,18 @@
+#ifndef BSW_HAL_POWER_MANAGEMENT_INC_PWRMNG_H_
+#define BSW_HAL_POWER_MANAGEMENT_INC_PWRMNG_H_
+
+typedef struct
+{
+	uint8 :4; //reserved
+	uint8 SM0;
+	uint8 SM1;
+	uint8 SM2;
+	uint8 SE;
+
+}MCUCR_Struct;
+
+#define MCUCR_PwrMg  *((volatile MCUCR_Struct)0x55)
+
+
+
+#endif /* BSW_HAL_POWER_MANAGEMENT_INC_PWRMNG_H_ */

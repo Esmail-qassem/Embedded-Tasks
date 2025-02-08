@@ -1,0 +1,13 @@
+/*
+ * PwrMng.h
+ *
+ *  Created on: Feb 8, 2025
+ *      Author: s_a_a
+ */
+
+#ifndef BSW_HAL_POWER_MANAGEMENT_INC_PWRMNG_H_
+#define BSW_HAL_POWER_MANAGEMENT_INC_PWRMNG_H_
+
+
+
+#endif /* BSW_HAL_POWER_MANAGEMENT_INC_PWRMNG_H_ */

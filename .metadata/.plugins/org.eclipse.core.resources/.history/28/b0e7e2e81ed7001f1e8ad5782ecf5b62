@@ -1,0 +1,21 @@
+#include "PORT/inc/PORT_interface.h"
+#include "LCD_OLED/inc/OLED.h"
+
+int main(void)
+{
+
+    PORT_voidInit();
+    LCD12864_voidInit();
+    LCD12864_voidClear(); // Clear the display
+
+    // Display the number 12345 on page 2, column 0
+    LCD12864_voidDisplayChar('5');
+
+      while (1)
+      {
+          // Your main loop code here
+      }
+return 0;
+}
+
+

@@ -32,8 +32,6 @@ void TIMER0_Delay(uint16 Copy_uint16Delay)
 	while(TIMER0_TIFR_Reg->OCF0 == 0);
 	TIMER0_TIFR_Reg->OCF0 =1;
 	Counter++;
-
-
 	}
 
 }
@@ -53,7 +51,7 @@ void TIMER0_voidInit(void)
 
 #elif TIMER_MODE==CTC_MODE
 	TIMER0_TCCR0_Reg->WGM00=DISABLE;
-	TIMER0_TCCR0_Reg->WGM01=ENABLE;
+	TIMER0_TCCR0_Reg->WGM01=1;
 	TIMER0_TCCR0_Reg->COM0=CTC_OUTPUT_MODE;
 
 #elif TIMER_MODE==FAST_PWM_MODE
@@ -69,7 +67,7 @@ void TIMER0_voidInit(void)
 #endif
 
 #ifdef COMPARE_MATCH_ISR_ENABLE
-	TIMER0_TIMSK_Reg->OCIE0=ENABLE;
+	TIMER0_TIMSK_Reg->OCIE0=1;
 #endif
 
 

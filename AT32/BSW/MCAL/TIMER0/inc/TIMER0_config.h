@@ -15,7 +15,7 @@
  * FAST_PWM_MODE
  * PWM_PHASE_CORRECT_MODE
  * */
-#define TIMER_MODE  FAST_PWM_MODE
+#define TIMER_MODE  CTC_MODE
 
 /*if you use: CTC             |  FAST_PWM                 | PHASE_CORRECT                |
  *----------------------------|---------------------------|----------------------------  |
@@ -43,7 +43,7 @@
  * EXTERNAL_CLCK_FALLING_EDGE
  * EXTERNAL_CLCK_RISING_EDGE
  * **/
-#define CLCK_SELECTION  DIVIDE_BY_8
+#define CLCK_SELECTION  DIVIDE_BY_64
 
 
 /** INTERRUPT OPTIONS :

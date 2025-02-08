@@ -10,8 +10,8 @@
 #ifndef ADC_PRIVATE_H_
 #define ADC_PRIVATE_H_
 
-static void (*Global_PvNotifacation)(void)=NULL;
-static uint16 *Global_uint16PuReading=NULL;
+static void (*Global_PvNotifacation)(void)=0;
+static uint16 *Global_uint16PuReading=0;
 void __vector_16 (void)__attribute((signal));
 
 

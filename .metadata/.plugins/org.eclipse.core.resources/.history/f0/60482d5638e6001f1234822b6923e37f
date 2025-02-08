@@ -1,0 +1,23 @@
+
+
+#ifndef BSW_HAL_INTERNAL_EEPROM_INC_INT_EEPROM_H_
+#define BSW_HAL_INTERNAL_EEPROM_INC_INT_EEPROM_H_
+
+#define EEARL    *(volatile(*uint16)0x3E)
+
+#define EEDR
+
+
+#define EECR
+
+enum EECR_bits
+{
+	EERE,
+	EEWE,
+	EEMWE,
+	EERIE
+
+
+};
+
+#endif /* BSW_HAL_INTERNAL_EEPROM_INC_INT_EEPROM_H_ */

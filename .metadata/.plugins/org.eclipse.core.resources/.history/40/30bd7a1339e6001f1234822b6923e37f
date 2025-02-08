@@ -1,0 +1,22 @@
+
+
+#ifndef BSW_HAL_INTERNAL_EEPROM_INC_INT_EEPROM_H_
+#define BSW_HAL_INTERNAL_EEPROM_INC_INT_EEPROM_H_
+
+#define EEARL    *((volatile uint16*)0x3E)
+
+#define EEDR	*((volatile uint16*)0x3D)
+
+
+#define EECR	*((volatile uint16*)0x3C)
+
+enum EECR_bits
+{
+	EERE,
+	EEWE,
+	EEMWE,
+	EERIE
+};
+uint8 EEPROM_read(uint16 uiAddress);
+
+#endif /* BSW_HAL_INTERNAL_EEPROM_INC_INT_EEPROM_H_ */

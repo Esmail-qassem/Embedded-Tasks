@@ -18,6 +18,9 @@ RM := rm -rf
 -include BSW/MCAL/EXT/src/subdir.mk
 -include BSW/MCAL/DIO/src/subdir.mk
 -include BSW/MCAL/ADC/src/subdir.mk
+-include BSW/HAL/Power_Management/src/subdir.mk
+-include BSW/HAL/LCD_OLED/src/subdir.mk
+-include BSW/HAL/Internal_EEPROM/src/subdir.mk
 -include BSW/HAL/EEPROM/src/subdir.mk
 -include BSW/HAL/CLCD/src/subdir.mk
 -include App/TrafficLights/src/subdir.mk

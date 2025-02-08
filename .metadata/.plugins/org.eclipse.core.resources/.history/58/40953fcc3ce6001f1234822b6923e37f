@@ -1,0 +1,9 @@
+#ifndef BSW_HAL_POWER_MANAGEMENT_INC_PWRMNG_H_
+#define BSW_HAL_POWER_MANAGEMENT_INC_PWRMNG_H_
+
+
+#define MCUCR  *((volatile MCUCR_Struct)0x)
+
+
+
+#endif /* BSW_HAL_POWER_MANAGEMENT_INC_PWRMNG_H_ */

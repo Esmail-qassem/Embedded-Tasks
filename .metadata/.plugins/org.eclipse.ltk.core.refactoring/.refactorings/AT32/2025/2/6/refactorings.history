@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;AT32/BSW/HAL/Power_Management/PwrMng.h&apos; to &apos;inc&apos;" description="Rename resource &apos;PwrMng.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="BSW/HAL/Power_Management/PwrMng.h" name="inc" stamp="1739033192216" updateReferences="true"/>
+</session>

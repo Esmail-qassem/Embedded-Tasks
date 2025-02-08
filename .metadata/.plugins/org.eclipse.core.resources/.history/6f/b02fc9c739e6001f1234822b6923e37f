@@ -1,0 +1,27 @@
+#include "STD_TYPES.h"
+#include "BIT_MATH.h"
+#include "../inc/Int_EEPROM.h"
+
+void EEPROM_write(uint16 uiAddress, uint8 ucData)
+{
+/* Set up address and data registers */
+EEARL = uiAddress;
+EEDR = ucData;
+EECR |= (1<<EEWE);
+/* Write logical one to EEMWE */
+EECR |= (1<<EEMWE);
+/* Start eeprom write by setting EEWE */
+
+}
+
+
+uint8 EEPROM_read(uint16 uiAddress)
+{
+/* Wait for completion of previous write */
+/* Set up address register */
+EEARL = uiAddress;
+/* Start eeprom read by writing EERE */
+EECR |= (1<<EERE);
+/* Return data from data register */
+return EEDR;
+}

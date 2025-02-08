@@ -1,0 +1,34 @@
+#include "TrafficLights/inc/TrafficLightsControl_interface.h"
+#include  "Fixed_Point/inc/FixedPoint_interface.h"
+#include  "EEPROM/inc/EEPROM_interface.h"
+#include "TIMER0/inc/TIMER0_interface.h"
+void static Test_Code(void)
+{
+static int i=1;
+EEPROM_voidSendData(0x111,i++);
+TIMER0_Delay(5);
+CLCD_voidGoToXY(0,0);
+uint8 x=EEPROM_voidReceiveData(0x111);
+CLCD_voidGoToXY(0,0);
+CLCD_voidWriteNumber(x);
+
+
+
+}
+int main()
+{
+	TrafficLightInit();
+	GIE_Enable();
+	EEPROM_Init();
+	TIMER0_voiSetCompareMatchValue(125);
+	Timer0_Timer0CTCCallBackFunc(Test_Code);
+
+
+	while(1)
+	{
+		//Test_Code();
+		//TrafficLightMainFunction();
+	}
+}
+
+

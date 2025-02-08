@@ -1,17 +1,14 @@
 #include "EEPROM/inc/EEPROM_interface.h"
-//void static Test_Code(void)
-//{
-//static int i=1;
-//EEPROM_voidSendData(0x111,i++);
-//_delay_ms(30);  // Check status after sending data
-//CLCD_voidGoToXY(0,0);
-//uint8 x=EEPROM_voidReceiveData(0x111);
-//CLCD_voidGoToXY(0,0);
-//CLCD_voidWriteNumber(x);
-//
-//
-//
-//}
+
+
+void static Test_Code(void)
+{
+static int i=1;
+EEPROM_voidSendData(0x111,i++);
+	//TIMER0_Delay(50);
+uint8 x=EEPROM_voidReceiveData(0x111);
+
+}
 
 void EEPROM_Init(void)
 {

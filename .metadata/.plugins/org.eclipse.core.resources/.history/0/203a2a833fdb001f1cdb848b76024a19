@@ -1,0 +1,46 @@
+#include "STD_TYPES.h"
+#include <stdint.h>
+#include <stdio.h>
+#include "TWI/inc/TWI_interface.h"
+
+#define SSD1306_ADDRESS 0x3C
+static const uint8_t FONT_5X8[][5] = {
+    {0x3E, 0x51, 0x49, 0x45, 0x3E}, // 0
+    {0x00, 0x42, 0x7F, 0x40, 0x00}, // 1
+    {0x72, 0x49, 0x49, 0x49, 0x46}, // 2
+    {0x21, 0x41, 0x49, 0x4D, 0x33}, // 3
+    {0x18, 0x14, 0x12, 0x7F, 0x10}, // 4
+    {0x27, 0x45, 0x45, 0x45, 0x39}, // 5
+    {0x3C, 0x4A, 0x49, 0x49, 0x30}, // 6
+    {0x01, 0x71, 0x09, 0x05, 0x03}, // 7
+    {0x36, 0x49, 0x49, 0x49, 0x36}, // 8
+    {0x06, 0x49, 0x49, 0x29, 0x1E}  // 9
+};
+// SSD1306 Commands
+#define SSD1306_DISPLAY_OFF 0xAE
+#define SSD1306_DISPLAY_ON 0xAF
+#define SSD1306_SET_DISPLAY_CLOCK_DIV 0xD5
+#define SSD1306_SET_MULTIPLEX 0xA8
+#define SSD1306_SET_DISPLAY_OFFSET 0xD3
+#define SSD1306_SET_START_LINE 0x40
+#define SSD1306_CHARGE_PUMP 0x8D
+#define SSD1306_MEMORY_MODE 0x20
+#define SSD1306_SEG_REMAP 0xA1
+#define SSD1306_COM_SCAN_DEC 0xC8
+#define SSD1306_SET_COM_PINS 0xDA
+#define SSD1306_SET_CONTRAST 0x81
+#define SSD1306_SET_PRECHARGE 0xD9
+#define SSD1306_SET_VCOM_DETECT 0xDB
+#define SSD1306_DISPLAY_ALL_ON_RESUME 0xA4
+#define SSD1306_NORMAL_DISPLAY 0xA6
+#define SSD1306_COLUMN_ADDR 0x21
+#define SSD1306_PAGE_ADDR 0x22
+
+// Function Prototypes
+void SSD1306_Init(void);
+void SSD1306_SendCommand(uint8 command);
+void SSD1306_SendData(uint8 data);
+void SSD1306_ClearDisplay(void);
+void SSD1306_SetCursor(uint8 page, uint8 column);
+void SSD1306_DisplayNumber(int number, uint8 page, uint8 column);
+

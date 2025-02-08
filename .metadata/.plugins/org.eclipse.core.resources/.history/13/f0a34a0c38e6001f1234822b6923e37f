@@ -1,0 +1,13 @@
+/*
+ * Int_EEPROM.h
+ *
+ *  Created on: Feb 8, 2025
+ *      Author: s_a_a
+ */
+
+#ifndef BSW_HAL_INTERNAL_EEPROM_INC_INT_EEPROM_H_
+#define BSW_HAL_INTERNAL_EEPROM_INC_INT_EEPROM_H_
+
+
+
+#endif /* BSW_HAL_INTERNAL_EEPROM_INC_INT_EEPROM_H_ */

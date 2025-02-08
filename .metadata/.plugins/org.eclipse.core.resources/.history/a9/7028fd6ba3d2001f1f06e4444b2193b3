@@ -1,8 +1,0 @@
-
-#ifndef APP_FIXED_POINT_INC_FIXEDPOINT_PRIVATE_H_
-#define APP_FIXED_POINT_INC_FIXEDPOINT_PRIVATE_H_
-
-typedef uint32 fixed32_t; // 32-bit fixed-point representation
-
-
-#endif /* APP_FIXED_POINT_INC_FIXEDPOINT_PRIVATE_H_ */

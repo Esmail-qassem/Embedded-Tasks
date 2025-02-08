@@ -26,6 +26,9 @@ App/TrafficLights/src \
 App \
 BSW/HAL/CLCD/src \
 BSW/HAL/EEPROM/src \
+BSW/HAL/Internal_EEPROM/src \
+BSW/HAL/LCD_OLED/src \
+BSW/HAL/Power_Management/src \
 BSW/MCAL/ADC/src \
 BSW/MCAL/DIO/src \
 BSW/MCAL/EXT/src \
