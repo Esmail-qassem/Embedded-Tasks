@@ -21,6 +21,7 @@ C_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
+App/Event_Based/src \
 App/Fixed_Point/src \
 App/TrafficLights/src \
 App \
@@ -38,5 +39,7 @@ BSW/MCAL/TIMER0/src \
 BSW/MCAL/TIMER1/src \
 BSW/MCAL/TIMER2/src \
 BSW/MCAL/TWI/src \
+BSW/MCAL/UART/src \
+Services/Queue/src \
 Services/Stack \
 

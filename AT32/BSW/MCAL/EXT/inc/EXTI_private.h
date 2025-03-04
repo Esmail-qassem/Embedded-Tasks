@@ -11,9 +11,9 @@
 
 /*Global pointer to function to hold INT ISR address*/
 
-static void(*Global_EXTI_pvInt0Func)(void)=NULL;
-static void(*Global_EXTI_pvInt1Func)(void)=NULL;
-static void(*Global_EXTI_pvInt2Func)(void)=NULL;
+static void(*Global_EXTI_pvInt0Func)(void)=0;
+static void(*Global_EXTI_pvInt1Func)(void)=0;
+static void(*Global_EXTI_pvInt2Func)(void)=0;
 /********************************************************/
 /*Compiler Directive That Deal with Linker Optimizer To keep ISR And Not Remove It*/
 void __vector_1 (void)  __attribute__((signal));

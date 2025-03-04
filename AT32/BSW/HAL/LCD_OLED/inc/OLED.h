@@ -1,5 +1,4 @@
 #include "STD_TYPES.h"
-#include <stdio.h>
 #include "TWI/inc/TWI_interface.h"
 
 #define SSD1306_ADDRESS 0x3C

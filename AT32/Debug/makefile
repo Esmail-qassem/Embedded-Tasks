@@ -9,6 +9,8 @@ RM := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include Services/Stack/subdir.mk
+-include Services/Queue/src/subdir.mk
+-include BSW/MCAL/UART/src/subdir.mk
 -include BSW/MCAL/TWI/src/subdir.mk
 -include BSW/MCAL/TIMER2/src/subdir.mk
 -include BSW/MCAL/TIMER1/src/subdir.mk
@@ -25,6 +27,7 @@ RM := rm -rf
 -include BSW/HAL/CLCD/src/subdir.mk
 -include App/TrafficLights/src/subdir.mk
 -include App/Fixed_Point/src/subdir.mk
+-include App/Event_Based/src/subdir.mk
 -include App/subdir.mk
 -include subdir.mk
 -include objects.mk

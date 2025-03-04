@@ -187,23 +187,32 @@ void SSD1306_SetCursor(uint8 page, uint8 column)
 void SSD1306_DisplayNumber(int number, uint8 page, uint8 column)
 {
     char buffer[10];
-    snprintf(buffer, sizeof(buffer), "%d", number);
+    snprintf(buffer, sizeof(buffer), "%d", number);  // Convert number to string
 
+    uint8 num_length = strlen(buffer);  // Get length of the number
     SSD1306_SetCursor(page, column);
 
+    // Print the number
     for (uint8 i = 0; buffer[i] != '\0'; i++)
     {
         if (buffer[i] >= '0' && buffer[i] <= '9')
         {
-            uint8 digit = buffer[i] - '0'+16;
-            for (uint8 j = 0; j < 5; j++) // Each digit is 5 columns wide
+            uint8 digit = buffer[i] - '0' + 16;
+            for (uint8 j = 0; j < 5; j++) // Each digit is 5 pixels wide
             {
                 SSD1306_SendData(Font_5x7[digit][j]);
             }
             SSD1306_SendData(0x00); // Add a column of spacing
         }
     }
+
+    // Overwrite remaining old digits with blank spaces (only if needed)
+    for (uint8 i = num_length * 6; i < 18; i++) // Max 3-digit numbers
+    {
+        SSD1306_SendData(0x00);
+    }
 }
+
 
 
 void SSD1306_DisplayChar(uint8 c,uint8 page, uint8 column)
