@@ -9930,23 +9930,23 @@ void EB_voidInit(void)
     3e40:	0e 94 77 0f 	call	0x1eee	; 0x1eee <GIE_Enable>
 	PORT_voidInit();
     3e44:	0e 94 55 0f 	call	0x1eaa	; 0x1eaa <PORT_voidInit>
-	//timer0 will fire the interrupt every 100 ms
+	//timer0 will fire the interrupt every 500 ms
 	TIMER0_voiSetCompareMatchValue(255);
     3e48:	8f ef       	ldi	r24, 0xFF	; 255
     3e4a:	0e 94 b3 0e 	call	0x1d66	; 0x1d66 <TIMER0_voiSetCompareMatchValue>
-	TIMER0_voidInit();
-    3e4e:	0e 94 83 0e 	call	0x1d06	; 0x1d06 <TIMER0_voidInit>
 	Timer0_Timer0CTCCallBackFunc(&TimerEventBased);
-    3e52:	8c ef       	ldi	r24, 0xFC	; 252
-    3e54:	9e e1       	ldi	r25, 0x1E	; 30
-    3e56:	0e 94 de 0e 	call	0x1dbc	; 0x1dbc <Timer0_Timer0CTCCallBackFunc>
+    3e4e:	8c ef       	ldi	r24, 0xFC	; 252
+    3e50:	9e e1       	ldi	r25, 0x1E	; 30
+    3e52:	0e 94 de 0e 	call	0x1dbc	; 0x1dbc <Timer0_Timer0CTCCallBackFunc>
+	TIMER0_voidInit();
+    3e56:	0e 94 83 0e 	call	0x1d06	; 0x1d06 <TIMER0_voidInit>
 	//ext will fire interrupt on change
-	EXTI_voidInt0Init();
-    3e5a:	0e 94 93 0f 	call	0x1f26	; 0x1f26 <EXTI_voidInt0Init>
 	EXTI_uint8Int0SetCallBack(&ExtEventBased);
-    3e5e:	87 ee       	ldi	r24, 0xE7	; 231
-    3e60:	9e e1       	ldi	r25, 0x1E	; 30
-    3e62:	0e 94 51 11 	call	0x22a2	; 0x22a2 <EXTI_uint8Int0SetCallBack>
+    3e5a:	87 ee       	ldi	r24, 0xE7	; 231
+    3e5c:	9e e1       	ldi	r25, 0x1E	; 30
+    3e5e:	0e 94 51 11 	call	0x22a2	; 0x22a2 <EXTI_uint8Int0SetCallBack>
+	EXTI_voidInt0Init();
+    3e62:	0e 94 93 0f 	call	0x1f26	; 0x1f26 <EXTI_voidInt0Init>
 	SSD1306_Init();
     3e66:	0e 94 f0 16 	call	0x2de0	; 0x2de0 <SSD1306_Init>
 	Queue_Creation(&My_Queue);

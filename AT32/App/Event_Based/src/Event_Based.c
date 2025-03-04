@@ -40,13 +40,13 @@ void EB_voidInit(void)
 {
 	GIE_Enable();
 	PORT_voidInit();
-	//timer0 will fire the interrupt every 100 ms
+	//timer0 will fire the interrupt every 500 ms
 	TIMER0_voiSetCompareMatchValue(255);
-	TIMER0_voidInit();
 	Timer0_Timer0CTCCallBackFunc(&TimerEventBased);
+	TIMER0_voidInit();
 	//ext will fire interrupt on change
-	EXTI_voidInt0Init();
 	EXTI_uint8Int0SetCallBack(&ExtEventBased);
+	EXTI_voidInt0Init();
 	SSD1306_Init();
 	Queue_Creation(&My_Queue);
 
