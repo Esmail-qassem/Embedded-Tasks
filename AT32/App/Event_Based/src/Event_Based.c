@@ -2,29 +2,68 @@
 
 Queue My_Queue;
 Queue_Entry Data=0;
+uint8 Push_Botton_value=0;
+uint8 Push_Botton_Flag=1;
+uint8 volatile modified=0; // mutex
+
+
+
+void Timer_Handler(void)
+{
+	SSD1306_DisplayString("tIMER", 0, 0);
+
+}
+
+void EXTI0_Handler(void)
+{
+	SSD1306_DisplayString("EXTI",10, 0);
+
+}
+
+Queue_Entry Queue_Return;
+typedef void(*Ptr2Func)(void);
+Ptr2Func Queue_Handlers[EVENT_COUNT]= {
+		                                  Timer_Handler,
+		                                  EXTI0_Handler
+                                      };
+
+
 
 void ExtEventBased(void)
 {
 	if(!Queue_Full(&My_Queue))
 	{
+		while(modified);
+		modified=1;
 		Queue_Append(&My_Queue,EXT_EVENT);
+		modified=0;
 	}
 	else
 	{
-
 	 // do nothing
 	}
-
 }
 void TimerEventBased(void)
 {
 	static uint8 Loc_Counter=0;
 	Loc_Counter++;
-	if(Loc_Counter==120) //500 ms
+	if(Loc_Counter==6) //120 >> 1sec   12 >> 100ms
 	{
 		if(!Queue_Full(&My_Queue))
 		{
-		Queue_Append(&My_Queue,TIMER_EVENT);
+			DIO_GetPinVal(DIO_PORTD, DIO_Pin7,&Push_Botton_value);
+			if(Push_Botton_value==0u && Push_Botton_Flag==1)
+			{
+				while(modified);
+				modified=1;
+				Push_Botton_Flag=0;
+				Queue_Append(&My_Queue,TIMER_EVENT);
+				modified=0;
+			}
+			else if(Push_Botton_value==1u && Push_Botton_Flag==0)
+			{
+				Push_Botton_Flag=1;
+			}
 		}
 		else
 		{
@@ -33,6 +72,10 @@ void TimerEventBased(void)
 		}
 		Loc_Counter=0;
 	}
+	else
+	{
+		//do nothing
+	}
 
 }
 
@@ -40,49 +83,35 @@ void EB_voidInit(void)
 {
 	GIE_Enable();
 	PORT_voidInit();
-	//timer0 will fire the interrupt every 500 ms
-	TIMER0_voiSetCompareMatchValue(255);
+	TIMER0_voiSetCompareMatchValue(255);//timer0 will fire the interrupt every 500 ms
 	Timer0_Timer0CTCCallBackFunc(&TimerEventBased);
 	TIMER0_voidInit();
-	//ext will fire interrupt on change
-	EXTI_uint8Int0SetCallBack(&ExtEventBased);
+	EXTI_uint8Int0SetCallBack(&ExtEventBased);//ext will fire interrupt on change
 	EXTI_voidInt0Init();
 	SSD1306_Init();
 	Queue_Creation(&My_Queue);
 
 
 }
+
+
 void EB_VoidRunnable(void)
 {
-	// TraverseQueue(&My_Queue,queue_display);
-	 SSD1306_DisplayNumber(My_Queue.Queue_Size,0, 0);
+	 if(Queue_not_empty==Queue_Empty(&My_Queue))
+	 {
+			while(modified);
+			modified=1;
+			Queue_Server(&My_Queue,&Queue_Return);
+			modified=0;
+			Queue_Handlers[Queue_Return]();
 
-	if(Queue_empty==Queue_Empty(&My_Queue))
-	{
-		 SSD1306_DisplayChar('c',100,100);
-
-	}
-	else
-	{
-		Queue_Server(&My_Queue,&Data);
-			switch(Data)
-			{
-				case EXT_EVENT :
-				{
-					 SSD1306_DisplayChar('a',100,100);
-					 break;
-				}
-				case TIMER_EVENT :
-				{
-					 SSD1306_DisplayChar('b',100,100);
-					 break;
-				}
-				default:
-					break;
-			}
+	 }
+	 else
+	 {
+		 SSD1306_ClearDisplay();
+	 }
 
 
-	}
 
 
 }
